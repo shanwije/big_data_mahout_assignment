@@ -1,0 +1,3116 @@
+shan@siw-t480:~/.ssh$ ssh -i ~/siw-msc-ubuntu-big-data.pem hadoop@ec2-34-228-184-8.compute-1.amazonaws.com
+Warning: Identity file /home/shan/siw-msc-ubuntu-big-data.pem not accessible: No such file or directory.
+The authenticity of host 'ec2-34-228-184-8.compute-1.amazonaws.com (34.228.184.8)' can't be established.
+ECDSA key fingerprint is SHA256:61ReTNAS70Hoe5vRyOosc8tEP0Qs4r7kF9WtX9p8D0E.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+Host key verification failed.
+shan@siw-t480:~/.ssh$ ssh -i ~/siw-msc-ubuntu-big-data.pem hadoop@ec2-34-228-184-8.compute-1.amazonaws.com
+Warning: Identity file /home/shan/siw-msc-ubuntu-big-data.pem not accessible: No such file or directory.
+The authenticity of host 'ec2-34-228-184-8.compute-1.amazonaws.com (34.228.184.8)' can't be established.
+ECDSA key fingerprint is SHA256:61ReTNAS70Hoe5vRyOosc8tEP0Qs4r7kF9WtX9p8D0E.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-34-228-184-8.compute-1.amazonaws.com,34.228.184.8' (ECDSA) to the list of known hosts.
+hadoop@ec2-34-228-184-8.compute-1.amazonaws.com: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+shan@siw-t480:~/.ssh$ 
+shan@siw-t480:~/.ssh$ 
+shan@siw-t480:~/.ssh$ ssh -i siw-msc-ubuntu-big-data.pem hadoop@ec2-34-228-184-8.compute-1.amazonaws.com
+Last login: Sat Mar 20 11:08:09 2021
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+33 package(s) needed for security, out of 73 available
+Run "sudo yum update" to apply all updates.
+                                                                    
+EEEEEEEEEEEEEEEEEEEE MMMMMMMM           MMMMMMMM RRRRRRRRRRRRRRR    
+E::::::::::::::::::E M:::::::M         M:::::::M R::::::::::::::R   
+EE:::::EEEEEEEEE:::E M::::::::M       M::::::::M R:::::RRRRRR:::::R 
+  E::::E       EEEEE M:::::::::M     M:::::::::M RR::::R      R::::R
+  E::::E             M::::::M:::M   M:::M::::::M   R:::R      R::::R
+  E:::::EEEEEEEEEE   M:::::M M:::M M:::M M:::::M   R:::RRRRRR:::::R 
+  E::::::::::::::E   M:::::M  M:::M:::M  M:::::M   R:::::::::::RR   
+  E:::::EEEEEEEEEE   M:::::M   M:::::M   M:::::M   R:::RRRRRR::::R  
+  E::::E             M:::::M    M:::M    M:::::M   R:::R      R::::R
+  E::::E       EEEEE M:::::M     MMM     M:::::M   R:::R      R::::R
+EE:::::EEEEEEEE::::E M:::::M             M:::::M   R:::R      R::::R
+E::::::::::::::::::E M:::::M             M:::::M RR::::R      R::::R
+EEEEEEEEEEEEEEEEEEEE MMMMMMM             MMMMMMM RRRRRRR      RRRRRR
+                                                                    
+[hadoop@ip-10-0-0-38 ~]$ sudo yum update
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00     
+3 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-linux-extras.noarch 0:1.6.12-1.amzn2 will be updated
+---> Package amazon-linux-extras.noarch 0:2.0.0-1.amzn2 will be an update
+---> Package amazon-linux-extras-yum-plugin.noarch 0:1.6.12-1.amzn2 will be updated
+---> Package amazon-linux-extras-yum-plugin.noarch 0:2.0.0-1.amzn2 will be an update
+---> Package boost-date-time.x86_64 0:1.53.0-27.amzn2.0.3 will be updated
+---> Package boost-date-time.x86_64 0:1.53.0-27.amzn2.0.5 will be an update
+---> Package boost-system.x86_64 0:1.53.0-27.amzn2.0.3 will be updated
+---> Package boost-system.x86_64 0:1.53.0-27.amzn2.0.5 will be an update
+---> Package boost-thread.x86_64 0:1.53.0-27.amzn2.0.3 will be updated
+---> Package boost-thread.x86_64 0:1.53.0-27.amzn2.0.5 will be an update
+---> Package ca-certificates.noarch 0:2019.2.32-76.amzn2.0.3 will be updated
+---> Package ca-certificates.noarch 0:2020.2.41-70.0.amzn2.0.1 will be an update
+---> Package chrony.x86_64 0:3.2-1.amzn2.0.5 will be updated
+---> Package chrony.x86_64 0:3.5.1-1.amzn2.0.1 will be an update
+--> Processing Dependency: libnettle.so.4()(64bit) for package: chrony-3.5.1-1.amzn2.0.1.x86_64
+---> Package cloud-init.noarch 0:19.3-3.amzn2 will be updated
+---> Package cloud-init.noarch 0:19.3-43.amzn2 will be an update
+---> Package cpp.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package cpp.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package dnsmasq.x86_64 0:2.76-16.amzn2.0.1 will be updated
+---> Package dnsmasq.x86_64 0:2.76-16.amzn2.1.3 will be an update
+---> Package ec2-instance-connect.noarch 0:1.1-12.amzn2 will be updated
+---> Package ec2-instance-connect.noarch 0:1.1-13.amzn2 will be an update
+---> Package gcc.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package gcc.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package gcc-c++.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package gcc-c++.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package gcc-gfortran.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package gcc-gfortran.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package gd.x86_64 0:2.0.35-26.amzn2.0.2 will be updated
+---> Package gd.x86_64 0:2.0.35-27.amzn2 will be an update
+---> Package glib2.x86_64 0:2.56.1-5.amzn2.0.1 will be updated
+---> Package glib2.x86_64 0:2.56.1-7.amzn2.0.1 will be an update
+---> Package iptables.x86_64 0:1.8.2-16.amzn2.0.2 will be updated
+---> Package iptables.x86_64 0:1.8.4-10.amzn2.1.2 will be an update
+---> Package iptables-libs.x86_64 0:1.8.2-16.amzn2.0.2 will be updated
+---> Package iptables-libs.x86_64 0:1.8.4-10.amzn2.1.2 will be an update
+---> Package java-1.8.0-amazon-corretto.x86_64 1:1.8.0_272.b10-3.amzn2 will be updated
+---> Package java-1.8.0-amazon-corretto.x86_64 1:1.8.0_282.b08-1.amzn2 will be an update
+---> Package java-1.8.0-amazon-corretto-devel.x86_64 1:1.8.0_272.b10-3.amzn2 will be updated
+---> Package java-1.8.0-amazon-corretto-devel.x86_64 1:1.8.0_282.b08-1.amzn2 will be an update
+---> Package java-11-amazon-corretto.x86_64 1:11.0.9+12-1.amzn2 will be updated
+---> Package java-11-amazon-corretto.x86_64 1:11.0.10+9-1.amzn2.1 will be an update
+---> Package java-11-amazon-corretto-headless.x86_64 1:11.0.9+12-1.amzn2 will be updated
+---> Package java-11-amazon-corretto-headless.x86_64 1:11.0.10+9-1.amzn2.1 will be an update
+---> Package kernel.x86_64 0:4.14.225-168.357.amzn2 will be installed
+---> Package kpatch-runtime.noarch 0:0.8.0-4.amzn2 will be updated
+---> Package kpatch-runtime.noarch 0:0.9.2-4.amzn2 will be an update
+---> Package libatomic.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libatomic.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libcilkrts.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libcilkrts.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libgcc.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libgcc.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libgfortran.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libgfortran.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libgomp.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libgomp.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libitm.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libitm.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libmpx.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libmpx.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libquadmath.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libquadmath.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libsanitizer.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libsanitizer.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package libsss_idmap.x86_64 0:1.16.4-21.amzn2 will be updated
+---> Package libsss_idmap.x86_64 0:1.16.5-10.amzn2.6 will be an update
+---> Package libsss_nss_idmap.x86_64 0:1.16.4-21.amzn2 will be updated
+---> Package libsss_nss_idmap.x86_64 0:1.16.5-10.amzn2.6 will be an update
+---> Package libstdc++.x86_64 0:7.3.1-9.amzn2 will be updated
+---> Package libstdc++.x86_64 0:7.3.1-12.amzn2 will be an update
+---> Package nspr.x86_64 0:4.21.0-1.amzn2.0.2 will be updated
+---> Package nspr.x86_64 0:4.25.0-2.amzn2 will be an update
+---> Package nss.x86_64 0:3.44.0-7.amzn2 will be updated
+---> Package nss.x86_64 0:3.53.1-3.amzn2 will be an update
+---> Package nss-softokn.x86_64 0:3.44.0-8.amzn2 will be updated
+---> Package nss-softokn.x86_64 0:3.53.1-6.amzn2 will be an update
+---> Package nss-softokn-freebl.x86_64 0:3.44.0-8.amzn2 will be updated
+---> Package nss-softokn-freebl.x86_64 0:3.53.1-6.amzn2 will be an update
+---> Package nss-sysinit.x86_64 0:3.44.0-7.amzn2 will be updated
+---> Package nss-sysinit.x86_64 0:3.53.1-3.amzn2 will be an update
+---> Package nss-tools.x86_64 0:3.44.0-7.amzn2 will be updated
+---> Package nss-tools.x86_64 0:3.53.1-3.amzn2 will be an update
+---> Package nss-util.x86_64 0:3.44.0-4.amzn2 will be updated
+---> Package nss-util.x86_64 0:3.53.1-1.amzn2 will be an update
+---> Package p11-kit.x86_64 0:0.23.21-2.amzn2.0.1 will be updated
+---> Package p11-kit.x86_64 0:0.23.22-1.amzn2.0.1 will be an update
+---> Package p11-kit-trust.x86_64 0:0.23.21-2.amzn2.0.1 will be updated
+---> Package p11-kit-trust.x86_64 0:0.23.22-1.amzn2.0.1 will be an update
+---> Package perl.x86_64 4:5.16.3-294.amzn2 will be updated
+---> Package perl.x86_64 4:5.16.3-299.amzn2.0.1 will be an update
+---> Package perl-CPAN.noarch 0:1.9800-294.amzn2 will be updated
+---> Package perl-CPAN.noarch 0:1.9800-299.amzn2.0.1 will be an update
+---> Package perl-ExtUtils-Install.noarch 0:1.58-294.amzn2 will be updated
+---> Package perl-ExtUtils-Install.noarch 0:1.58-299.amzn2.0.1 will be an update
+---> Package perl-Pod-Escapes.noarch 1:1.04-294.amzn2 will be updated
+---> Package perl-Pod-Escapes.noarch 1:1.04-299.amzn2.0.1 will be an update
+---> Package perl-devel.x86_64 4:5.16.3-294.amzn2 will be updated
+---> Package perl-devel.x86_64 4:5.16.3-299.amzn2.0.1 will be an update
+---> Package perl-libs.x86_64 4:5.16.3-294.amzn2 will be updated
+---> Package perl-libs.x86_64 4:5.16.3-299.amzn2.0.1 will be an update
+---> Package perl-macros.x86_64 4:5.16.3-294.amzn2 will be updated
+---> Package perl-macros.x86_64 4:5.16.3-299.amzn2.0.1 will be an update
+---> Package pygpgme.x86_64 0:0.3-9.amzn2.0.2 will be updated
+---> Package pygpgme.x86_64 0:0.3-9.amzn2.0.3 will be an update
+---> Package pyliblzma.x86_64 0:0.5.3-11.amzn2.0.2 will be updated
+---> Package pyliblzma.x86_64 0:0.5.3-25.amzn2 will be an update
+---> Package python.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package python.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package python-devel.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package python-devel.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package python-libs.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package python-libs.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package python-test.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package python-test.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package python-tools.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package python-tools.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package python2-s3transfer.noarch 0:0.1.12-1.amzn2.0.1 will be updated
+---> Package python2-s3transfer.noarch 0:0.3.3-1.amzn2.0.1 will be an update
+---> Package python3.x86_64 0:3.7.9-1.amzn2.0.1 will be updated
+---> Package python3.x86_64 0:3.7.9-1.amzn2.0.2 will be an update
+---> Package python3-libs.x86_64 0:3.7.9-1.amzn2.0.1 will be updated
+---> Package python3-libs.x86_64 0:3.7.9-1.amzn2.0.2 will be an update
+---> Package python3-test.x86_64 0:3.7.9-1.amzn2.0.1 will be updated
+---> Package python3-test.x86_64 0:3.7.9-1.amzn2.0.2 will be an update
+---> Package python3-tkinter.x86_64 0:3.7.9-1.amzn2.0.1 will be updated
+---> Package python3-tkinter.x86_64 0:3.7.9-1.amzn2.0.2 will be an update
+---> Package python3-tools.x86_64 0:3.7.9-1.amzn2.0.1 will be obsoleted
+---> Package python3-tools.x86_64 0:3.7.9-1.amzn2.0.2 will be obsoleting
+---> Package rng-tools.x86_64 0:5-13.amzn2 will be updated
+---> Package rng-tools.x86_64 0:6.8-3.amzn2.0.5 will be an update
+---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6.3 will be updated
+---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6.7 will be an update
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.3 will be updated
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.7 will be an update
+---> Package sssd-client.x86_64 0:1.16.4-21.amzn2 will be updated
+---> Package sssd-client.x86_64 0:1.16.5-10.amzn2.6 will be an update
+---> Package system-release.x86_64 1:2-12.amzn2 will be updated
+---> Package system-release.x86_64 1:2-13.amzn2 will be an update
+---> Package tkinter.x86_64 0:2.7.18-1.amzn2.0.2 will be updated
+---> Package tkinter.x86_64 0:2.7.18-1.amzn2.0.3 will be an update
+---> Package tzdata.noarch 0:2020a-1.amzn2 will be updated
+---> Package tzdata.noarch 0:2020d-2.amzn2 will be an update
+---> Package yum.noarch 0:3.4.3-158.amzn2.0.4 will be updated
+---> Package yum.noarch 0:3.4.3-158.amzn2.0.5 will be an update
+--> Running transaction check
+---> Package nettle.x86_64 0:2.7.1-8.amzn2.0.2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                     Arch   Version                   Repository   Size
+================================================================================
+Installing:
+ kernel                      x86_64 4.14.225-168.357.amzn2    amzn2-core   21 M
+ python3-tools               x86_64 3.7.9-1.amzn2.0.2         amzn2-core  846 k
+     replacing  python3-tools.x86_64 3.7.9-1.amzn2.0.1
+Updating:
+ amazon-linux-extras         noarch 2.0.0-1.amzn2             amzn2-core   38 k
+ amazon-linux-extras-yum-plugin
+                             noarch 2.0.0-1.amzn2             amzn2-core   11 k
+ boost-date-time             x86_64 1.53.0-27.amzn2.0.5       amzn2-core   52 k
+ boost-system                x86_64 1.53.0-27.amzn2.0.5       amzn2-core   40 k
+ boost-thread                x86_64 1.53.0-27.amzn2.0.5       amzn2-core   73 k
+ ca-certificates             noarch 2020.2.41-70.0.amzn2.0.1  amzn2-core  379 k
+ chrony                      x86_64 3.5.1-1.amzn2.0.1         amzn2-core  258 k
+ cloud-init                  noarch 19.3-43.amzn2             amzn2-core  925 k
+ cpp                         x86_64 7.3.1-12.amzn2            amzn2-core  9.2 M
+ dnsmasq                     x86_64 2.76-16.amzn2.1.3         amzn2-core  279 k
+ ec2-instance-connect        noarch 1.1-13.amzn2              amzn2-core   22 k
+ gcc                         x86_64 7.3.1-12.amzn2            amzn2-core   22 M
+ gcc-c++                     x86_64 7.3.1-12.amzn2            amzn2-core   13 M
+ gcc-gfortran                x86_64 7.3.1-12.amzn2            amzn2-core   11 M
+ gd                          x86_64 2.0.35-27.amzn2           amzn2-core  146 k
+ glib2                       x86_64 2.56.1-7.amzn2.0.1        amzn2-core  2.4 M
+ iptables                    x86_64 1.8.4-10.amzn2.1.2        amzn2-core  476 k
+ iptables-libs               x86_64 1.8.4-10.amzn2.1.2        amzn2-core   93 k
+ java-1.8.0-amazon-corretto  x86_64 1:1.8.0_282.b08-1.amzn2   amzn2extra-corretto8
+                                                                           38 M
+ java-1.8.0-amazon-corretto-devel
+                             x86_64 1:1.8.0_282.b08-1.amzn2   amzn2extra-corretto8
+                                                                           64 M
+ java-11-amazon-corretto     x86_64 1:11.0.10+9-1.amzn2.1     amzn2-core  189 k
+ java-11-amazon-corretto-headless
+                             x86_64 1:11.0.10+9-1.amzn2.1     amzn2-core  164 M
+ kpatch-runtime              noarch 0.9.2-4.amzn2             amzn2-core   26 k
+ libatomic                   x86_64 7.3.1-12.amzn2            amzn2-core   46 k
+ libcilkrts                  x86_64 7.3.1-12.amzn2            amzn2-core   85 k
+ libgcc                      x86_64 7.3.1-12.amzn2            amzn2-core   98 k
+ libgfortran                 x86_64 7.3.1-12.amzn2            amzn2-core  536 k
+ libgomp                     x86_64 7.3.1-12.amzn2            amzn2-core  204 k
+ libitm                      x86_64 7.3.1-12.amzn2            amzn2-core   84 k
+ libmpx                      x86_64 7.3.1-12.amzn2            amzn2-core   51 k
+ libquadmath                 x86_64 7.3.1-12.amzn2            amzn2-core  189 k
+ libsanitizer                x86_64 7.3.1-12.amzn2            amzn2-core  641 k
+ libsss_idmap                x86_64 1.16.5-10.amzn2.6         amzn2-core  160 k
+ libsss_nss_idmap            x86_64 1.16.5-10.amzn2.6         amzn2-core  166 k
+ libstdc++                   x86_64 7.3.1-12.amzn2            amzn2-core  445 k
+ nspr                        x86_64 4.25.0-2.amzn2            amzn2-core  125 k
+ nss                         x86_64 3.53.1-3.amzn2            amzn2-core  860 k
+ nss-softokn                 x86_64 3.53.1-6.amzn2            amzn2-core  352 k
+ nss-softokn-freebl          x86_64 3.53.1-6.amzn2            amzn2-core  328 k
+ nss-sysinit                 x86_64 3.53.1-3.amzn2            amzn2-core   65 k
+ nss-tools                   x86_64 3.53.1-3.amzn2            amzn2-core  530 k
+ nss-util                    x86_64 3.53.1-1.amzn2            amzn2-core   78 k
+ p11-kit                     x86_64 0.23.22-1.amzn2.0.1       amzn2-core  321 k
+ p11-kit-trust               x86_64 0.23.22-1.amzn2.0.1       amzn2-core  130 k
+ perl                        x86_64 4:5.16.3-299.amzn2.0.1    amzn2-core  8.0 M
+ perl-CPAN                   noarch 1.9800-299.amzn2.0.1      amzn2-core  294 k
+ perl-ExtUtils-Install       noarch 1.58-299.amzn2.0.1        amzn2-core   75 k
+ perl-Pod-Escapes            noarch 1:1.04-299.amzn2.0.1      amzn2-core   52 k
+ perl-devel                  x86_64 4:5.16.3-299.amzn2.0.1    amzn2-core  454 k
+ perl-libs                   x86_64 4:5.16.3-299.amzn2.0.1    amzn2-core  685 k
+ perl-macros                 x86_64 4:5.16.3-299.amzn2.0.1    amzn2-core   44 k
+ pygpgme                     x86_64 0.3-9.amzn2.0.3           amzn2-core   34 k
+ pyliblzma                   x86_64 0.5.3-25.amzn2            amzn2-core   51 k
+ python                      x86_64 2.7.18-1.amzn2.0.3        amzn2-core   93 k
+ python-devel                x86_64 2.7.18-1.amzn2.0.3        amzn2-core  403 k
+ python-libs                 x86_64 2.7.18-1.amzn2.0.3        amzn2-core  7.5 M
+ python-test                 x86_64 2.7.18-1.amzn2.0.3        amzn2-core  4.7 M
+ python-tools                x86_64 2.7.18-1.amzn2.0.3        amzn2-core  843 k
+ python2-s3transfer          noarch 0.3.3-1.amzn2.0.1         amzn2-core  104 k
+ python3                     x86_64 3.7.9-1.amzn2.0.2         amzn2-core   72 k
+ python3-libs                x86_64 3.7.9-1.amzn2.0.2         amzn2-core  9.2 M
+ python3-test                x86_64 3.7.9-1.amzn2.0.2         amzn2-core  7.6 M
+ python3-tkinter             x86_64 3.7.9-1.amzn2.0.2         amzn2-core  372 k
+ rng-tools                   x86_64 6.8-3.amzn2.0.5           amzn2-core   54 k
+ selinux-policy              noarch 3.13.1-192.amzn2.6.7      amzn2-core  456 k
+ selinux-policy-targeted     noarch 3.13.1-192.amzn2.6.7      amzn2-core  6.6 M
+ sssd-client                 x86_64 1.16.5-10.amzn2.6         amzn2-core  227 k
+ system-release              x86_64 1:2-13.amzn2              amzn2-core   18 k
+ tkinter                     x86_64 2.7.18-1.amzn2.0.3        amzn2-core  386 k
+ tzdata                      noarch 2020d-2.amzn2             amzn2-core  481 k
+ yum                         noarch 3.4.3-158.amzn2.0.5       amzn2-core  1.2 M
+Installing for dependencies:
+ nettle                      x86_64 2.7.1-8.amzn2.0.2         amzn2-core  329 k
+
+Transaction Summary
+================================================================================
+Install   2 Packages (+1 Dependent package)
+Upgrade  71 Packages
+
+Total download size: 404 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/74): amazon-linux-extras-2.0.0-1.amzn2.noarch.rpm       |  38 kB   00:00     
+(2/74): amazon-linux-extras-yum-plugin-2.0.0-1.amzn2.noarc |  11 kB   00:00     
+(3/74): boost-system-1.53.0-27.amzn2.0.5.x86_64.rpm        |  40 kB   00:00     
+(4/74): boost-thread-1.53.0-27.amzn2.0.5.x86_64.rpm        |  73 kB   00:00     
+(5/74): ca-certificates-2020.2.41-70.0.amzn2.0.1.noarch.rp | 379 kB   00:00     
+(6/74): boost-date-time-1.53.0-27.amzn2.0.5.x86_64.rpm     |  52 kB   00:00     
+(7/74): chrony-3.5.1-1.amzn2.0.1.x86_64.rpm                | 258 kB   00:00     
+(8/74): cloud-init-19.3-43.amzn2.noarch.rpm                | 925 kB   00:00     
+(9/74): dnsmasq-2.76-16.amzn2.1.3.x86_64.rpm               | 279 kB   00:00     
+(10/74): ec2-instance-connect-1.1-13.amzn2.noarch.rpm      |  22 kB   00:00     
+(11/74): cpp-7.3.1-12.amzn2.x86_64.rpm                     | 9.2 MB   00:00     
+(12/74): gcc-7.3.1-12.amzn2.x86_64.rpm                     |  22 MB   00:00     
+(13/74): gcc-c++-7.3.1-12.amzn2.x86_64.rpm                 |  13 MB   00:00     
+(14/74): gd-2.0.35-27.amzn2.x86_64.rpm                     | 146 kB   00:00     
+(15/74): gcc-gfortran-7.3.1-12.amzn2.x86_64.rpm            |  11 MB   00:00     
+(16/74): glib2-2.56.1-7.amzn2.0.1.x86_64.rpm               | 2.4 MB   00:00     
+(17/74): iptables-1.8.4-10.amzn2.1.2.x86_64.rpm            | 476 kB   00:00     
+(18/74): iptables-libs-1.8.4-10.amzn2.1.2.x86_64.rpm       |  93 kB   00:00     
+(19/74): java-11-amazon-corretto-11.0.10+9-1.amzn2.1.x86_6 | 189 kB   00:00     
+(20/74): kernel-4.14.225-168.357.amzn2.x86_64.rpm          |  21 MB   00:01     
+(21/74): kpatch-runtime-0.9.2-4.amzn2.noarch.rpm           |  26 kB   00:00     
+(22/74): libatomic-7.3.1-12.amzn2.x86_64.rpm               |  46 kB   00:00     
+(23/74): libcilkrts-7.3.1-12.amzn2.x86_64.rpm              |  85 kB   00:00     
+(24/74): java-1.8.0-amazon-corretto-1.8.0_282.b08-1.amzn2. |  38 MB   00:01     
+(25/74): libgcc-7.3.1-12.amzn2.x86_64.rpm                  |  98 kB   00:00     
+(26/74): libgfortran-7.3.1-12.amzn2.x86_64.rpm             | 536 kB   00:00     
+(27/74): libgomp-7.3.1-12.amzn2.x86_64.rpm                 | 204 kB   00:00     
+(28/74): libitm-7.3.1-12.amzn2.x86_64.rpm                  |  84 kB   00:00     
+(29/74): libmpx-7.3.1-12.amzn2.x86_64.rpm                  |  51 kB   00:00     
+(30/74): libquadmath-7.3.1-12.amzn2.x86_64.rpm             | 189 kB   00:00     
+(31/74): libsanitizer-7.3.1-12.amzn2.x86_64.rpm            | 641 kB   00:00     
+(32/74): java-1.8.0-amazon-corretto-devel-1.8.0_282.b08-1. |  64 MB   00:01     
+(33/74): libsss_idmap-1.16.5-10.amzn2.6.x86_64.rpm         | 160 kB   00:00     
+(34/74): libsss_nss_idmap-1.16.5-10.amzn2.6.x86_64.rpm     | 166 kB   00:00     
+(35/74): libstdc++-7.3.1-12.amzn2.x86_64.rpm               | 445 kB   00:00     
+(36/74): nettle-2.7.1-8.amzn2.0.2.x86_64.rpm               | 329 kB   00:00     
+(37/74): nspr-4.25.0-2.amzn2.x86_64.rpm                    | 125 kB   00:00     
+(38/74): nss-3.53.1-3.amzn2.x86_64.rpm                     | 860 kB   00:00     
+(39/74): nss-softokn-3.53.1-6.amzn2.x86_64.rpm             | 352 kB   00:00     
+(40/74): nss-softokn-freebl-3.53.1-6.amzn2.x86_64.rpm      | 328 kB   00:00     
+(41/74): nss-sysinit-3.53.1-3.amzn2.x86_64.rpm             |  65 kB   00:00     
+(42/74): nss-tools-3.53.1-3.amzn2.x86_64.rpm               | 530 kB   00:00     
+(43/74): nss-util-3.53.1-1.amzn2.x86_64.rpm                |  78 kB   00:00     
+(44/74): p11-kit-0.23.22-1.amzn2.0.1.x86_64.rpm            | 321 kB   00:00     
+(45/74): p11-kit-trust-0.23.22-1.amzn2.0.1.x86_64.rpm      | 130 kB   00:00     
+(46/74): perl-5.16.3-299.amzn2.0.1.x86_64.rpm              | 8.0 MB   00:00     
+(47/74): perl-CPAN-1.9800-299.amzn2.0.1.noarch.rpm         | 294 kB   00:00     
+(48/74): perl-ExtUtils-Install-1.58-299.amzn2.0.1.noarch.r |  75 kB   00:00     
+(49/74): perl-Pod-Escapes-1.04-299.amzn2.0.1.noarch.rpm    |  52 kB   00:00     
+(50/74): perl-devel-5.16.3-299.amzn2.0.1.x86_64.rpm        | 454 kB   00:00     
+(51/74): perl-libs-5.16.3-299.amzn2.0.1.x86_64.rpm         | 685 kB   00:00     
+(52/74): perl-macros-5.16.3-299.amzn2.0.1.x86_64.rpm       |  44 kB   00:00     
+(53/74): pygpgme-0.3-9.amzn2.0.3.x86_64.rpm                |  34 kB   00:00     
+(54/74): pyliblzma-0.5.3-25.amzn2.x86_64.rpm               |  51 kB   00:00     
+(55/74): python-2.7.18-1.amzn2.0.3.x86_64.rpm              |  93 kB   00:00     
+(56/74): java-11-amazon-corretto-headless-11.0.10+9-1.amzn | 164 MB   00:03     
+(57/74): python-devel-2.7.18-1.amzn2.0.3.x86_64.rpm        | 403 kB   00:00     
+(58/74): python-libs-2.7.18-1.amzn2.0.3.x86_64.rpm         | 7.5 MB   00:00     
+(59/74): python-test-2.7.18-1.amzn2.0.3.x86_64.rpm         | 4.7 MB   00:00     
+(60/74): python-tools-2.7.18-1.amzn2.0.3.x86_64.rpm        | 843 kB   00:00     
+(61/74): python2-s3transfer-0.3.3-1.amzn2.0.1.noarch.rpm   | 104 kB   00:00     
+(62/74): python3-3.7.9-1.amzn2.0.2.x86_64.rpm              |  72 kB   00:00     
+(63/74): python3-test-3.7.9-1.amzn2.0.2.x86_64.rpm         | 7.6 MB   00:00     
+(64/74): python3-libs-3.7.9-1.amzn2.0.2.x86_64.rpm         | 9.2 MB   00:00     
+(65/74): python3-tkinter-3.7.9-1.amzn2.0.2.x86_64.rpm      | 372 kB   00:00     
+(66/74): rng-tools-6.8-3.amzn2.0.5.x86_64.rpm              |  54 kB   00:00     
+(67/74): python3-tools-3.7.9-1.amzn2.0.2.x86_64.rpm        | 846 kB   00:00     
+(68/74): selinux-policy-3.13.1-192.amzn2.6.7.noarch.rpm    | 456 kB   00:00     
+(69/74): sssd-client-1.16.5-10.amzn2.6.x86_64.rpm          | 227 kB   00:00     
+(70/74): system-release-2-13.amzn2.x86_64.rpm              |  18 kB   00:00     
+(71/74): tkinter-2.7.18-1.amzn2.0.3.x86_64.rpm             | 386 kB   00:00     
+(72/74): selinux-policy-targeted-3.13.1-192.amzn2.6.7.noar | 6.6 MB   00:00     
+(73/74): tzdata-2020d-2.amzn2.noarch.rpm                   | 481 kB   00:00     
+(74/74): yum-3.4.3-158.amzn2.0.5.noarch.rpm                | 1.2 MB   00:00     
+--------------------------------------------------------------------------------
+Total                                               82 MB/s | 404 MB  00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libgcc-7.3.1-12.amzn2.x86_64                               1/146 
+  Updating   : libstdc++-7.3.1-12.amzn2.x86_64                            2/146 
+  Updating   : nspr-4.25.0-2.amzn2.x86_64                                 3/146 
+  Updating   : nss-util-3.53.1-1.amzn2.x86_64                             4/146 
+  Updating   : python-libs-2.7.18-1.amzn2.0.3.x86_64                      5/146 
+  Updating   : python-2.7.18-1.amzn2.0.3.x86_64                           6/146 
+  Updating   : python3-libs-3.7.9-1.amzn2.0.2.x86_64                      7/146 
+  Updating   : python3-3.7.9-1.amzn2.0.2.x86_64                           8/146 
+  Updating   : p11-kit-0.23.22-1.amzn2.0.1.x86_64                         9/146 
+  Installing : nettle-2.7.1-8.amzn2.0.2.x86_64                           10/146 
+  Updating   : libquadmath-7.3.1-12.amzn2.x86_64                         11/146 
+  Updating   : 1:system-release-2-13.amzn2.x86_64                        12/146 
+  Updating   : amazon-linux-extras-2.0.0-1.amzn2.noarch                  13/146 
+  Updating   : selinux-policy-3.13.1-192.amzn2.6.7.noarch                14/146 
+  Updating   : libgfortran-7.3.1-12.amzn2.x86_64                         15/146 
+  Updating   : p11-kit-trust-0.23.22-1.amzn2.0.1.x86_64                  16/146 
+  Updating   : ca-certificates-2020.2.41-70.0.amzn2.0.1.noarch           17/146 
+  Updating   : 1:java-11-amazon-corretto-headless-11.0.10+9-1.amzn2.1    18/146 
+  Updating   : python3-tkinter-3.7.9-1.amzn2.0.2.x86_64                  19/146 
+  Installing : python3-tools-3.7.9-1.amzn2.0.2.x86_64                    20/146 
+  Updating   : pygpgme-0.3-9.amzn2.0.3.x86_64                            21/146 
+  Updating   : tkinter-2.7.18-1.amzn2.0.3.x86_64                         22/146 
+  Updating   : python-devel-2.7.18-1.amzn2.0.3.x86_64                    23/146 
+  Updating   : pyliblzma-0.5.3-25.amzn2.x86_64                           24/146 
+  Updating   : nss-softokn-freebl-3.53.1-6.amzn2.x86_64                  25/146 
+  Updating   : nss-softokn-3.53.1-6.amzn2.x86_64                         26/146 
+  Updating   : nss-sysinit-3.53.1-3.amzn2.x86_64                         27/146 
+  Updating   : nss-3.53.1-3.amzn2.x86_64                                 28/146 
+  Updating   : libcilkrts-7.3.1-12.amzn2.x86_64                          29/146 
+  Updating   : libsanitizer-7.3.1-12.amzn2.x86_64                        30/146 
+  Updating   : boost-system-1.53.0-27.amzn2.0.5.x86_64                   31/146 
+  Updating   : glib2-2.56.1-7.amzn2.0.1.x86_64                           32/146 
+  Updating   : 1:java-1.8.0-amazon-corretto-1.8.0_282.b08-1.amzn2.x86    33/146 
+  Updating   : 4:perl-macros-5.16.3-299.amzn2.0.1.x86_64                 34/146 
+  Updating   : 4:perl-libs-5.16.3-299.amzn2.0.1.x86_64                   35/146 
+  Updating   : 4:perl-5.16.3-299.amzn2.0.1.x86_64                        36/146 
+  Updating   : perl-ExtUtils-Install-1.58-299.amzn2.0.1.noarch           37/146 
+  Updating   : 4:perl-devel-5.16.3-299.amzn2.0.1.x86_64                  38/146 
+  Updating   : libitm-7.3.1-12.amzn2.x86_64                              39/146 
+  Updating   : libmpx-7.3.1-12.amzn2.x86_64                              40/146 
+  Updating   : libatomic-7.3.1-12.amzn2.x86_64                           41/146 
+  Updating   : libsss_idmap-1.16.5-10.amzn2.6.x86_64                     42/146 
+  Updating   : iptables-libs-1.8.4-10.amzn2.1.2.x86_64                   43/146 
+  Updating   : cpp-7.3.1-12.amzn2.x86_64                                 44/146 
+  Updating   : libgomp-7.3.1-12.amzn2.x86_64                             45/146 
+  Updating   : gcc-7.3.1-12.amzn2.x86_64                                 46/146 
+  Updating   : libsss_nss_idmap-1.16.5-10.amzn2.6.x86_64                 47/146 
+  Updating   : sssd-client-1.16.5-10.amzn2.6.x86_64                      48/146 
+  Updating   : gcc-gfortran-7.3.1-12.amzn2.x86_64                        49/146 
+  Updating   : gcc-c++-7.3.1-12.amzn2.x86_64                             50/146 
+  Updating   : iptables-1.8.4-10.amzn2.1.2.x86_64                        51/146 
+  Updating   : 1:perl-Pod-Escapes-1.04-299.amzn2.0.1.noarch              52/146 
+  Updating   : perl-CPAN-1.9800-299.amzn2.0.1.noarch                     53/146 
+  Updating   : 1:java-1.8.0-amazon-corretto-devel-1.8.0_282.b08-1.amz    54/146 
+  Updating   : boost-thread-1.53.0-27.amzn2.0.5.x86_64                   55/146 
+  Updating   : nss-tools-3.53.1-3.amzn2.x86_64                           56/146 
+  Updating   : yum-3.4.3-158.amzn2.0.5.noarch                            57/146 
+  Updating   : cloud-init-19.3-43.amzn2.noarch                           58/146 
+  Updating   : python-tools-2.7.18-1.amzn2.0.3.x86_64                    59/146 
+  Updating   : python3-test-3.7.9-1.amzn2.0.2.x86_64                     60/146 
+  Updating   : 1:java-11-amazon-corretto-11.0.10+9-1.amzn2.1.x86_64      61/146 
+  Updating   : selinux-policy-targeted-3.13.1-192.amzn2.6.7.noarch       62/146 
+  Updating   : amazon-linux-extras-yum-plugin-2.0.0-1.amzn2.noarch       63/146 
+  Updating   : chrony-3.5.1-1.amzn2.0.1.x86_64                           64/146 
+  Updating   : dnsmasq-2.76-16.amzn2.1.3.x86_64                          65/146 
+  Updating   : python-test-2.7.18-1.amzn2.0.3.x86_64                     66/146 
+  Updating   : python2-s3transfer-0.3.3-1.amzn2.0.1.noarch               67/146 
+  Updating   : boost-date-time-1.53.0-27.amzn2.0.5.x86_64                68/146 
+  Updating   : tzdata-2020d-2.amzn2.noarch                               69/146 
+  Updating   : rng-tools-6.8-3.amzn2.0.5.x86_64                          70/146 
+  Installing : kernel-4.14.225-168.357.amzn2.x86_64                      71/146 
+  Updating   : gd-2.0.35-27.amzn2.x86_64                                 72/146 
+ec2-instance-connect:x:998:996::/home/ec2-instance-connect:/sbin/nologin
+  Updating   : ec2-instance-connect-1.1-13.amzn2.noarch                  73/146 
+Warning: ec2-instance-connect.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+  Updating   : kpatch-runtime-0.9.2-4.amzn2.noarch                       74/146 
+  Cleanup    : yum-3.4.3-158.amzn2.0.4.noarch                            75/146 
+  Cleanup    : perl-ExtUtils-Install-1.58-294.amzn2.noarch               76/146 
+  Cleanup    : 4:perl-devel-5.16.3-294.amzn2.x86_64                      77/146 
+  Cleanup    : pygpgme-0.3-9.amzn2.0.2.x86_64                            78/146 
+  Cleanup    : python-tools-2.7.18-1.amzn2.0.2.x86_64                    79/146 
+  Cleanup    : cloud-init-19.3-3.amzn2.noarch                            80/146 
+  Cleanup    : nss-tools-3.44.0-7.amzn2.x86_64                           81/146 
+  Cleanup    : nss-sysinit-3.44.0-7.amzn2.x86_64                         82/146 
+  Cleanup    : nss-3.44.0-7.amzn2.x86_64                                 83/146 
+  Cleanup    : nss-softokn-3.44.0-8.amzn2.x86_64                         84/146 
+  Cleanup    : python3-test-3.7.9-1.amzn2.0.1.x86_64                     85/146 
+  Cleanup    : python-devel-2.7.18-1.amzn2.0.2.x86_64                    86/146 
+  Cleanup    : 1:java-1.8.0-amazon-corretto-devel-1.8.0_272.b10-3.amz    87/146 
+  Cleanup    : 1:java-1.8.0-amazon-corretto-1.8.0_272.b10-3.amzn2.x86    88/146 
+  Cleanup    : boost-thread-1.53.0-27.amzn2.0.3.x86_64                   89/146 
+  Cleanup    : python3-tools-3.7.9-1.amzn2.0.1.x86_64                    90/146 
+  Cleanup    : python3-tkinter-3.7.9-1.amzn2.0.1.x86_64                  91/146 
+  Cleanup    : boost-system-1.53.0-27.amzn2.0.3.x86_64                   92/146 
+  Cleanup    : pyliblzma-0.5.3-11.amzn2.0.2.x86_64                       93/146 
+  Cleanup    : gcc-c++-7.3.1-9.amzn2.x86_64                              94/146 
+  Cleanup    : boost-date-time-1.53.0-27.amzn2.0.3.x86_64                95/146 
+  Cleanup    : sssd-client-1.16.4-21.amzn2.x86_64                        96/146 
+  Cleanup    : python-test-2.7.18-1.amzn2.0.2.x86_64                     97/146 
+  Cleanup    : gcc-gfortran-7.3.1-9.amzn2.x86_64                         98/146 
+  Cleanup    : perl-CPAN-1.9800-294.amzn2.noarch                         99/146 
+  Cleanup    : amazon-linux-extras-yum-plugin-1.6.12-1.amzn2.noarch     100/146 
+  Cleanup    : amazon-linux-extras-1.6.12-1.amzn2.noarch                101/146 
+  Cleanup    : python2-s3transfer-0.1.12-1.amzn2.0.1.noarch             102/146 
+  Cleanup    : 1:java-11-amazon-corretto-11.0.9+12-1.amzn2.x86_64       103/146 
+  Cleanup    : 1:java-11-amazon-corretto-headless-11.0.9+12-1.amzn2.x   104/146 
+  Cleanup    : ca-certificates-2019.2.32-76.amzn2.0.3.noarch            105/146 
+  Cleanup    : selinux-policy-targeted-3.13.1-192.amzn2.6.3.noarch      106/146 
+  Cleanup    : selinux-policy-3.13.1-192.amzn2.6.3.noarch               107/146 
+  Cleanup    : 1:perl-Pod-Escapes-1.04-294.amzn2.noarch                 108/146 
+  Cleanup    : gcc-7.3.1-9.amzn2.x86_64                                 109/146 
+  Cleanup    : libsanitizer-7.3.1-9.amzn2.x86_64                        110/146 
+  Cleanup    : libcilkrts-7.3.1-9.amzn2.x86_64                          111/146 
+  Cleanup    : 4:perl-libs-5.16.3-294.amzn2.x86_64                      112/146 
+  Cleanup    : 4:perl-macros-5.16.3-294.amzn2.x86_64                    113/146 
+  Cleanup    : 4:perl-5.16.3-294.amzn2.x86_64                           114/146 
+  Cleanup    : libgfortran-7.3.1-9.amzn2.x86_64                         115/146 
+  Cleanup    : libstdc++-7.3.1-9.amzn2.x86_64                           116/146 
+  Cleanup    : p11-kit-trust-0.23.21-2.amzn2.0.1.x86_64                 117/146 
+  Cleanup    : python3-libs-3.7.9-1.amzn2.0.1.x86_64                    118/146 
+  Cleanup    : python3-3.7.9-1.amzn2.0.1.x86_64                         119/146 
+  Cleanup    : glib2-2.56.1-5.amzn2.0.1.x86_64                          120/146 
+  Cleanup    : tkinter-2.7.18-1.amzn2.0.2.x86_64                        121/146 
+  Cleanup    : python-2.7.18-1.amzn2.0.2.x86_64                         122/146 
+  Cleanup    : iptables-1.8.2-16.amzn2.0.2.x86_64                       123/146 
+  Cleanup    : chrony-3.2-1.amzn2.0.5.x86_64                            124/146 
+  Cleanup    : 1:system-release-2-12.amzn2.x86_64                       125/146 
+  Cleanup    : tzdata-2020a-1.amzn2.noarch                              126/146 
+  Cleanup    : ec2-instance-connect-1.1-12.amzn2.noarch                 127/146 
+  Cleanup    : kpatch-runtime-0.8.0-4.amzn2.noarch                      128/146 
+  Cleanup    : nss-softokn-freebl-3.44.0-8.amzn2.x86_64                 129/146 
+  Cleanup    : nss-util-3.44.0-4.amzn2.x86_64                           130/146 
+  Cleanup    : nspr-4.21.0-1.amzn2.0.2.x86_64                           131/146 
+  Cleanup    : iptables-libs-1.8.2-16.amzn2.0.2.x86_64                  132/146 
+  Cleanup    : python-libs-2.7.18-1.amzn2.0.2.x86_64                    133/146 
+  Cleanup    : libgcc-7.3.1-9.amzn2.x86_64                              134/146 
+  Cleanup    : p11-kit-0.23.21-2.amzn2.0.1.x86_64                       135/146 
+  Cleanup    : libquadmath-7.3.1-9.amzn2.x86_64                         136/146 
+  Cleanup    : cpp-7.3.1-9.amzn2.x86_64                                 137/146 
+  Cleanup    : libatomic-7.3.1-9.amzn2.x86_64                           138/146 
+  Cleanup    : libgomp-7.3.1-9.amzn2.x86_64                             139/146 
+  Cleanup    : libitm-7.3.1-9.amzn2.x86_64                              140/146 
+  Cleanup    : libmpx-7.3.1-9.amzn2.x86_64                              141/146 
+  Cleanup    : libsss_idmap-1.16.4-21.amzn2.x86_64                      142/146 
+  Cleanup    : libsss_nss_idmap-1.16.4-21.amzn2.x86_64                  143/146 
+  Cleanup    : dnsmasq-2.76-16.amzn2.0.1.x86_64                         144/146 
+  Cleanup    : rng-tools-5-13.amzn2.x86_64                              145/146 
+  Cleanup    : gd-2.0.35-26.amzn2.0.2.x86_64                            146/146 
+  Verifying  : python-libs-2.7.18-1.amzn2.0.3.x86_64                      1/146 
+  Verifying  : 4:perl-devel-5.16.3-299.amzn2.0.1.x86_64                   2/146 
+  Verifying  : chrony-3.5.1-1.amzn2.0.1.x86_64                            3/146 
+  Verifying  : 4:perl-libs-5.16.3-299.amzn2.0.1.x86_64                    4/146 
+  Verifying  : libsss_nss_idmap-1.16.5-10.amzn2.6.x86_64                  5/146 
+  Verifying  : pygpgme-0.3-9.amzn2.0.3.x86_64                             6/146 
+  Verifying  : tkinter-2.7.18-1.amzn2.0.3.x86_64                          7/146 
+  Verifying  : cloud-init-19.3-43.amzn2.noarch                            8/146 
+  Verifying  : nspr-4.25.0-2.amzn2.x86_64                                 9/146 
+  Verifying  : python3-3.7.9-1.amzn2.0.2.x86_64                          10/146 
+  Verifying  : 1:java-11-amazon-corretto-headless-11.0.10+9-1.amzn2.1    11/146 
+  Verifying  : libgomp-7.3.1-12.amzn2.x86_64                             12/146 
+  Verifying  : gcc-gfortran-7.3.1-12.amzn2.x86_64                        13/146 
+  Verifying  : 1:system-release-2-13.amzn2.x86_64                        14/146 
+  Verifying  : ca-certificates-2020.2.41-70.0.amzn2.0.1.noarch           15/146 
+  Verifying  : python-devel-2.7.18-1.amzn2.0.3.x86_64                    16/146 
+  Verifying  : cpp-7.3.1-12.amzn2.x86_64                                 17/146 
+  Verifying  : libcilkrts-7.3.1-12.amzn2.x86_64                          18/146 
+  Verifying  : 1:java-1.8.0-amazon-corretto-1.8.0_282.b08-1.amzn2.x86    19/146 
+  Verifying  : pyliblzma-0.5.3-25.amzn2.x86_64                           20/146 
+  Verifying  : python-test-2.7.18-1.amzn2.0.3.x86_64                     21/146 
+  Verifying  : libstdc++-7.3.1-12.amzn2.x86_64                           22/146 
+  Verifying  : 4:perl-5.16.3-299.amzn2.0.1.x86_64                        23/146 
+  Verifying  : libsanitizer-7.3.1-12.amzn2.x86_64                        24/146 
+  Verifying  : iptables-libs-1.8.4-10.amzn2.1.2.x86_64                   25/146 
+  Verifying  : kpatch-runtime-0.9.2-4.amzn2.noarch                       26/146 
+  Verifying  : python3-test-3.7.9-1.amzn2.0.2.x86_64                     27/146 
+  Verifying  : libsss_idmap-1.16.5-10.amzn2.6.x86_64                     28/146 
+  Verifying  : nss-softokn-freebl-3.53.1-6.amzn2.x86_64                  29/146 
+  Verifying  : ec2-instance-connect-1.1-13.amzn2.noarch                  30/146 
+  Verifying  : libatomic-7.3.1-12.amzn2.x86_64                           31/146 
+  Verifying  : 1:perl-Pod-Escapes-1.04-299.amzn2.0.1.noarch              32/146 
+  Verifying  : selinux-policy-targeted-3.13.1-192.amzn2.6.7.noarch       33/146 
+  Verifying  : amazon-linux-extras-2.0.0-1.amzn2.noarch                  34/146 
+  Verifying  : libmpx-7.3.1-12.amzn2.x86_64                              35/146 
+  Verifying  : 1:java-11-amazon-corretto-11.0.10+9-1.amzn2.1.x86_64      36/146 
+  Verifying  : libgfortran-7.3.1-12.amzn2.x86_64                         37/146 
+  Verifying  : 4:perl-macros-5.16.3-299.amzn2.0.1.x86_64                 38/146 
+  Verifying  : nss-util-3.53.1-1.amzn2.x86_64                            39/146 
+  Verifying  : libquadmath-7.3.1-12.amzn2.x86_64                         40/146 
+  Verifying  : boost-thread-1.53.0-27.amzn2.0.5.x86_64                   41/146 
+  Verifying  : selinux-policy-3.13.1-192.amzn2.6.7.noarch                42/146 
+  Verifying  : sssd-client-1.16.5-10.amzn2.6.x86_64                      43/146 
+  Verifying  : python2-s3transfer-0.3.3-1.amzn2.0.1.noarch               44/146 
+  Verifying  : gd-2.0.35-27.amzn2.x86_64                                 45/146 
+  Verifying  : p11-kit-trust-0.23.22-1.amzn2.0.1.x86_64                  46/146 
+  Verifying  : nss-tools-3.53.1-3.amzn2.x86_64                           47/146 
+  Verifying  : amazon-linux-extras-yum-plugin-2.0.0-1.amzn2.noarch       48/146 
+  Verifying  : python-tools-2.7.18-1.amzn2.0.3.x86_64                    49/146 
+  Verifying  : python3-libs-3.7.9-1.amzn2.0.2.x86_64                     50/146 
+  Verifying  : python-2.7.18-1.amzn2.0.3.x86_64                          51/146 
+  Verifying  : python3-tkinter-3.7.9-1.amzn2.0.2.x86_64                  52/146 
+  Verifying  : yum-3.4.3-158.amzn2.0.5.noarch                            53/146 
+  Verifying  : libitm-7.3.1-12.amzn2.x86_64                              54/146 
+  Verifying  : nettle-2.7.1-8.amzn2.0.2.x86_64                           55/146 
+  Verifying  : kernel-4.14.225-168.357.amzn2.x86_64                      56/146 
+  Verifying  : glib2-2.56.1-7.amzn2.0.1.x86_64                           57/146 
+  Verifying  : iptables-1.8.4-10.amzn2.1.2.x86_64                        58/146 
+  Verifying  : nss-softokn-3.53.1-6.amzn2.x86_64                         59/146 
+  Verifying  : libgcc-7.3.1-12.amzn2.x86_64                              60/146 
+  Verifying  : p11-kit-0.23.22-1.amzn2.0.1.x86_64                        61/146 
+  Verifying  : boost-system-1.53.0-27.amzn2.0.5.x86_64                   62/146 
+  Verifying  : rng-tools-6.8-3.amzn2.0.5.x86_64                          63/146 
+  Verifying  : dnsmasq-2.76-16.amzn2.1.3.x86_64                          64/146 
+  Verifying  : boost-date-time-1.53.0-27.amzn2.0.5.x86_64                65/146 
+  Verifying  : perl-ExtUtils-Install-1.58-299.amzn2.0.1.noarch           66/146 
+  Verifying  : 1:java-1.8.0-amazon-corretto-devel-1.8.0_282.b08-1.amz    67/146 
+  Verifying  : gcc-c++-7.3.1-12.amzn2.x86_64                             68/146 
+  Verifying  : nss-sysinit-3.53.1-3.amzn2.x86_64                         69/146 
+  Verifying  : gcc-7.3.1-12.amzn2.x86_64                                 70/146 
+  Verifying  : python3-tools-3.7.9-1.amzn2.0.2.x86_64                    71/146 
+  Verifying  : nss-3.53.1-3.amzn2.x86_64                                 72/146 
+  Verifying  : tzdata-2020d-2.amzn2.noarch                               73/146 
+  Verifying  : perl-CPAN-1.9800-299.amzn2.0.1.noarch                     74/146 
+  Verifying  : python-libs-2.7.18-1.amzn2.0.2.x86_64                     75/146 
+  Verifying  : selinux-policy-targeted-3.13.1-192.amzn2.6.3.noarch       76/146 
+  Verifying  : glib2-2.56.1-5.amzn2.0.1.x86_64                           77/146 
+  Verifying  : ec2-instance-connect-1.1-12.amzn2.noarch                  78/146 
+  Verifying  : python3-3.7.9-1.amzn2.0.1.x86_64                          79/146 
+  Verifying  : python3-tools-3.7.9-1.amzn2.0.1.x86_64                    80/146 
+  Verifying  : kpatch-runtime-0.8.0-4.amzn2.noarch                       81/146 
+  Verifying  : pyliblzma-0.5.3-11.amzn2.0.2.x86_64                       82/146 
+  Verifying  : chrony-3.2-1.amzn2.0.5.x86_64                             83/146 
+  Verifying  : 1:system-release-2-12.amzn2.x86_64                        84/146 
+  Verifying  : 1:java-1.8.0-amazon-corretto-devel-1.8.0_272.b10-3.amz    85/146 
+  Verifying  : 1:java-11-amazon-corretto-headless-11.0.9+12-1.amzn2.x    86/146 
+  Verifying  : selinux-policy-3.13.1-192.amzn2.6.3.noarch                87/146 
+  Verifying  : boost-system-1.53.0-27.amzn2.0.3.x86_64                   88/146 
+  Verifying  : python-devel-2.7.18-1.amzn2.0.2.x86_64                    89/146 
+  Verifying  : nss-3.44.0-7.amzn2.x86_64                                 90/146 
+  Verifying  : libstdc++-7.3.1-9.amzn2.x86_64                            91/146 
+  Verifying  : libgcc-7.3.1-9.amzn2.x86_64                               92/146 
+  Verifying  : nss-softokn-freebl-3.44.0-8.amzn2.x86_64                  93/146 
+  Verifying  : pygpgme-0.3-9.amzn2.0.2.x86_64                            94/146 
+  Verifying  : cloud-init-19.3-3.amzn2.noarch                            95/146 
+  Verifying  : iptables-libs-1.8.2-16.amzn2.0.2.x86_64                   96/146 
+  Verifying  : tzdata-2020a-1.amzn2.noarch                               97/146 
+  Verifying  : tkinter-2.7.18-1.amzn2.0.2.x86_64                         98/146 
+  Verifying  : sssd-client-1.16.4-21.amzn2.x86_64                        99/146 
+  Verifying  : p11-kit-0.23.21-2.amzn2.0.1.x86_64                       100/146 
+  Verifying  : libatomic-7.3.1-9.amzn2.x86_64                           101/146 
+  Verifying  : gcc-c++-7.3.1-9.amzn2.x86_64                             102/146 
+  Verifying  : libgfortran-7.3.1-9.amzn2.x86_64                         103/146 
+  Verifying  : 4:perl-libs-5.16.3-294.amzn2.x86_64                      104/146 
+  Verifying  : libsss_idmap-1.16.4-21.amzn2.x86_64                      105/146 
+  Verifying  : perl-CPAN-1.9800-294.amzn2.noarch                        106/146 
+  Verifying  : cpp-7.3.1-9.amzn2.x86_64                                 107/146 
+  Verifying  : 1:java-11-amazon-corretto-11.0.9+12-1.amzn2.x86_64       108/146 
+  Verifying  : python-test-2.7.18-1.amzn2.0.2.x86_64                    109/146 
+  Verifying  : 4:perl-devel-5.16.3-294.amzn2.x86_64                     110/146 
+  Verifying  : nss-sysinit-3.44.0-7.amzn2.x86_64                        111/146 
+  Verifying  : gd-2.0.35-26.amzn2.0.2.x86_64                            112/146 
+  Verifying  : libsss_nss_idmap-1.16.4-21.amzn2.x86_64                  113/146 
+  Verifying  : rng-tools-5-13.amzn2.x86_64                              114/146 
+  Verifying  : 1:java-1.8.0-amazon-corretto-1.8.0_272.b10-3.amzn2.x86   115/146 
+  Verifying  : python3-test-3.7.9-1.amzn2.0.1.x86_64                    116/146 
+  Verifying  : perl-ExtUtils-Install-1.58-294.amzn2.noarch              117/146 
+  Verifying  : boost-date-time-1.53.0-27.amzn2.0.3.x86_64               118/146 
+  Verifying  : nss-tools-3.44.0-7.amzn2.x86_64                          119/146 
+  Verifying  : 4:perl-5.16.3-294.amzn2.x86_64                           120/146 
+  Verifying  : boost-thread-1.53.0-27.amzn2.0.3.x86_64                  121/146 
+  Verifying  : amazon-linux-extras-yum-plugin-1.6.12-1.amzn2.noarch     122/146 
+  Verifying  : nspr-4.21.0-1.amzn2.0.2.x86_64                           123/146 
+  Verifying  : libquadmath-7.3.1-9.amzn2.x86_64                         124/146 
+  Verifying  : iptables-1.8.2-16.amzn2.0.2.x86_64                       125/146 
+  Verifying  : dnsmasq-2.76-16.amzn2.0.1.x86_64                         126/146 
+  Verifying  : p11-kit-trust-0.23.21-2.amzn2.0.1.x86_64                 127/146 
+  Verifying  : libcilkrts-7.3.1-9.amzn2.x86_64                          128/146 
+  Verifying  : amazon-linux-extras-1.6.12-1.amzn2.noarch                129/146 
+  Verifying  : nss-softokn-3.44.0-8.amzn2.x86_64                        130/146 
+  Verifying  : libitm-7.3.1-9.amzn2.x86_64                              131/146 
+  Verifying  : libmpx-7.3.1-9.amzn2.x86_64                              132/146 
+  Verifying  : libgomp-7.3.1-9.amzn2.x86_64                             133/146 
+  Verifying  : nss-util-3.44.0-4.amzn2.x86_64                           134/146 
+  Verifying  : gcc-7.3.1-9.amzn2.x86_64                                 135/146 
+  Verifying  : 4:perl-macros-5.16.3-294.amzn2.x86_64                    136/146 
+  Verifying  : python-tools-2.7.18-1.amzn2.0.2.x86_64                   137/146 
+  Verifying  : libsanitizer-7.3.1-9.amzn2.x86_64                        138/146 
+  Verifying  : python-2.7.18-1.amzn2.0.2.x86_64                         139/146 
+  Verifying  : python3-tkinter-3.7.9-1.amzn2.0.1.x86_64                 140/146 
+  Verifying  : yum-3.4.3-158.amzn2.0.4.noarch                           141/146 
+  Verifying  : ca-certificates-2019.2.32-76.amzn2.0.3.noarch            142/146 
+  Verifying  : python3-libs-3.7.9-1.amzn2.0.1.x86_64                    143/146 
+  Verifying  : python2-s3transfer-0.1.12-1.amzn2.0.1.noarch             144/146 
+  Verifying  : gcc-gfortran-7.3.1-9.amzn2.x86_64                        145/146 
+  Verifying  : 1:perl-Pod-Escapes-1.04-294.amzn2.noarch                 146/146 
+
+Installed:
+  kernel.x86_64 0:4.14.225-168.357.amzn2                                        
+  python3-tools.x86_64 0:3.7.9-1.amzn2.0.2                                      
+
+Dependency Installed:
+  nettle.x86_64 0:2.7.1-8.amzn2.0.2                                             
+
+Updated:
+  amazon-linux-extras.noarch 0:2.0.0-1.amzn2                                    
+  amazon-linux-extras-yum-plugin.noarch 0:2.0.0-1.amzn2                         
+  boost-date-time.x86_64 0:1.53.0-27.amzn2.0.5                                  
+  boost-system.x86_64 0:1.53.0-27.amzn2.0.5                                     
+  boost-thread.x86_64 0:1.53.0-27.amzn2.0.5                                     
+  ca-certificates.noarch 0:2020.2.41-70.0.amzn2.0.1                             
+  chrony.x86_64 0:3.5.1-1.amzn2.0.1                                             
+  cloud-init.noarch 0:19.3-43.amzn2                                             
+  cpp.x86_64 0:7.3.1-12.amzn2                                                   
+  dnsmasq.x86_64 0:2.76-16.amzn2.1.3                                            
+  ec2-instance-connect.noarch 0:1.1-13.amzn2                                    
+  gcc.x86_64 0:7.3.1-12.amzn2                                                   
+  gcc-c++.x86_64 0:7.3.1-12.amzn2                                               
+  gcc-gfortran.x86_64 0:7.3.1-12.amzn2                                          
+  gd.x86_64 0:2.0.35-27.amzn2                                                   
+  glib2.x86_64 0:2.56.1-7.amzn2.0.1                                             
+  iptables.x86_64 0:1.8.4-10.amzn2.1.2                                          
+  iptables-libs.x86_64 0:1.8.4-10.amzn2.1.2                                     
+  java-1.8.0-amazon-corretto.x86_64 1:1.8.0_282.b08-1.amzn2                     
+  java-1.8.0-amazon-corretto-devel.x86_64 1:1.8.0_282.b08-1.amzn2               
+  java-11-amazon-corretto.x86_64 1:11.0.10+9-1.amzn2.1                          
+  java-11-amazon-corretto-headless.x86_64 1:11.0.10+9-1.amzn2.1                 
+  kpatch-runtime.noarch 0:0.9.2-4.amzn2                                         
+  libatomic.x86_64 0:7.3.1-12.amzn2                                             
+  libcilkrts.x86_64 0:7.3.1-12.amzn2                                            
+  libgcc.x86_64 0:7.3.1-12.amzn2                                                
+  libgfortran.x86_64 0:7.3.1-12.amzn2                                           
+  libgomp.x86_64 0:7.3.1-12.amzn2                                               
+  libitm.x86_64 0:7.3.1-12.amzn2                                                
+  libmpx.x86_64 0:7.3.1-12.amzn2                                                
+  libquadmath.x86_64 0:7.3.1-12.amzn2                                           
+  libsanitizer.x86_64 0:7.3.1-12.amzn2                                          
+  libsss_idmap.x86_64 0:1.16.5-10.amzn2.6                                       
+  libsss_nss_idmap.x86_64 0:1.16.5-10.amzn2.6                                   
+  libstdc++.x86_64 0:7.3.1-12.amzn2                                             
+  nspr.x86_64 0:4.25.0-2.amzn2                                                  
+  nss.x86_64 0:3.53.1-3.amzn2                                                   
+  nss-softokn.x86_64 0:3.53.1-6.amzn2                                           
+  nss-softokn-freebl.x86_64 0:3.53.1-6.amzn2                                    
+  nss-sysinit.x86_64 0:3.53.1-3.amzn2                                           
+  nss-tools.x86_64 0:3.53.1-3.amzn2                                             
+  nss-util.x86_64 0:3.53.1-1.amzn2                                              
+  p11-kit.x86_64 0:0.23.22-1.amzn2.0.1                                          
+  p11-kit-trust.x86_64 0:0.23.22-1.amzn2.0.1                                    
+  perl.x86_64 4:5.16.3-299.amzn2.0.1                                            
+  perl-CPAN.noarch 0:1.9800-299.amzn2.0.1                                       
+  perl-ExtUtils-Install.noarch 0:1.58-299.amzn2.0.1                             
+  perl-Pod-Escapes.noarch 1:1.04-299.amzn2.0.1                                  
+  perl-devel.x86_64 4:5.16.3-299.amzn2.0.1                                      
+  perl-libs.x86_64 4:5.16.3-299.amzn2.0.1                                       
+  perl-macros.x86_64 4:5.16.3-299.amzn2.0.1                                     
+  pygpgme.x86_64 0:0.3-9.amzn2.0.3                                              
+  pyliblzma.x86_64 0:0.5.3-25.amzn2                                             
+  python.x86_64 0:2.7.18-1.amzn2.0.3                                            
+  python-devel.x86_64 0:2.7.18-1.amzn2.0.3                                      
+  python-libs.x86_64 0:2.7.18-1.amzn2.0.3                                       
+  python-test.x86_64 0:2.7.18-1.amzn2.0.3                                       
+  python-tools.x86_64 0:2.7.18-1.amzn2.0.3                                      
+  python2-s3transfer.noarch 0:0.3.3-1.amzn2.0.1                                 
+  python3.x86_64 0:3.7.9-1.amzn2.0.2                                            
+  python3-libs.x86_64 0:3.7.9-1.amzn2.0.2                                       
+  python3-test.x86_64 0:3.7.9-1.amzn2.0.2                                       
+  python3-tkinter.x86_64 0:3.7.9-1.amzn2.0.2                                    
+  rng-tools.x86_64 0:6.8-3.amzn2.0.5                                            
+  selinux-policy.noarch 0:3.13.1-192.amzn2.6.7                                  
+  selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.7                         
+  sssd-client.x86_64 0:1.16.5-10.amzn2.6                                        
+  system-release.x86_64 1:2-13.amzn2                                            
+  tkinter.x86_64 0:2.7.18-1.amzn2.0.3                                           
+  tzdata.noarch 0:2020d-2.amzn2                                                 
+  yum.noarch 0:3.4.3-158.amzn2.0.5                                              
+
+Replaced:
+  python3-tools.x86_64 0:3.7.9-1.amzn2.0.1                                      
+
+Complete!
+[hadoop@ip-10-0-0-38 ~]$ wget http://files.grouplens.org/datasets/movielens/ml-1m.zip
+--2021-03-20 11:13:06--  http://files.grouplens.org/datasets/movielens/ml-1m.zip
+Resolving files.grouplens.org (files.grouplens.org)... 128.101.65.152
+Connecting to files.grouplens.org (files.grouplens.org)|128.101.65.152|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5917549 (5.6M) [application/zip]
+Saving to: ‘ml-1m.zip’
+
+100%[======================================>] 5,917,549   17.8MB/s   in 0.3s   
+
+2021-03-20 11:13:07 (17.8 MB/s) - ‘ml-1m.zip’ saved [5917549/5917549]
+
+[hadoop@ip-10-0-0-38 ~]$ unzip ml-1m.zip
+Archive:  ml-1m.zip
+   creating: ml-1m/
+  inflating: ml-1m/movies.dat        
+  inflating: ml-1m/ratings.dat       
+  inflating: ml-1m/README            
+  inflating: ml-1m/users.dat         
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ cat ml-1m/ratings.dat | sed 's/::/,/g' | cut -f1-3 -d, > ratings.csv
+[hadoop@ip-10-0-0-38 ~]$ hadoop fs -put ratings.csv /ratings.csv
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ mahout recommenditembased --input /ratings.csv --output recommendations --numRecommendations 10 --outputPathForSimilarityMatrix similarity-matrix --similarityClassname SIMILARITY_COSINE
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /usr/lib/hadoop/bin/hadoop and HADOOP_CONF_DIR=/etc/hadoop/conf
+MAHOUT-JOB: /usr/lib/mahout/mahout-examples-0.13.0-job.jar
+21/03/20 11:14:13 INFO AbstractJob: Command line arguments: {--booleanData=[false], --endPhase=[2147483647], --input=[/ratings.csv], --maxPrefsInItemSimilarity=[500], --maxPrefsPerUser=[10], --maxSimilaritiesPerItem=[100], --minPrefsPerUser=[1], --numRecommendations=[10], --output=[recommendations], --outputPathForSimilarityMatrix=[similarity-matrix], --similarityClassname=[SIMILARITY_COSINE], --startPhase=[0], --tempDir=[temp]}
+21/03/20 11:14:13 INFO AbstractJob: Command line arguments: {--booleanData=[false], --endPhase=[2147483647], --input=[/ratings.csv], --minPrefsPerUser=[1], --output=[temp/preparePreferenceMatrix], --ratingShift=[0.0], --startPhase=[0], --tempDir=[temp]}
+21/03/20 11:14:13 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+21/03/20 11:14:13 INFO deprecation: mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+21/03/20 11:14:13 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+21/03/20 11:14:13 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:14:13 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:14:14 INFO FileInputFormat: Total input files to process : 1
+21/03/20 11:14:14 INFO GPLNativeCodeLoader: Loaded native gpl library
+21/03/20 11:14:14 INFO LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev 3fb854bbfdabadafad1fa2cca072658fa097fd67]
+21/03/20 11:14:15 INFO JobSubmitter: number of splits:1
+21/03/20 11:14:15 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0001
+21/03/20 11:14:15 INFO Configuration: resource-types.xml not found
+21/03/20 11:14:15 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+21/03/20 11:14:15 INFO ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+21/03/20 11:14:15 INFO ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+21/03/20 11:14:16 INFO YarnClientImpl: Submitted application application_1616237977131_0001
+21/03/20 11:14:16 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0001/
+21/03/20 11:14:16 INFO Job: Running job: job_1616237977131_0001
+21/03/20 11:14:24 INFO Job: Job job_1616237977131_0001 running in uber mode : false
+21/03/20 11:14:24 INFO Job:  map 0% reduce 0%
+21/03/20 11:14:32 INFO Job:  map 100% reduce 0%
+21/03/20 11:14:41 INFO Job:  map 100% reduce 18%
+21/03/20 11:14:42 INFO Job:  map 100% reduce 27%
+21/03/20 11:14:45 INFO Job:  map 100% reduce 82%
+21/03/20 11:14:46 INFO Job:  map 100% reduce 100%
+21/03/20 11:14:46 INFO Job: Job job_1616237977131_0001 completed successfully
+21/03/20 11:14:46 INFO Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=22365
+		FILE: Number of bytes written=2685302
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=11553570
+		HDFS: Number of bytes written=45921
+		HDFS: Number of read operations=36
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=1
+		Launched reduce tasks=11
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=270528
+		Total time spent by all reduces in occupied slots (ms)=10717824
+		Total time spent by all map tasks (ms)=5636
+		Total time spent by all reduce tasks (ms)=111644
+		Total vcore-milliseconds taken by all map tasks=5636
+		Total vcore-milliseconds taken by all reduce tasks=111644
+		Total megabyte-milliseconds taken by all map tasks=8656896
+		Total megabyte-milliseconds taken by all reduce tasks=342970368
+	Map-Reduce Framework
+		Map input records=1000209
+		Map output records=1000209
+		Map output bytes=3946230
+		Map output materialized bytes=22321
+		Input split bytes=114
+		Combine input records=1000209
+		Combine output records=3706
+		Reduce input groups=3706
+		Reduce shuffle bytes=22321
+		Reduce input records=3706
+		Reduce output records=3706
+		Spilled Records=7412
+		Shuffled Maps =11
+		Failed Shuffles=0
+		Merged Map outputs=11
+		GC time elapsed (ms)=2597
+		CPU time spent (ms)=20000
+		Physical memory (bytes) snapshot=4228685824
+		Virtual memory (bytes) snapshot=54799814656
+		Total committed heap usage (bytes)=3527409664
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=11553456
+	File Output Format Counters 
+		Bytes Written=45921
+21/03/20 11:14:46 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:14:46 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:14:47 INFO FileInputFormat: Total input files to process : 1
+21/03/20 11:14:47 INFO JobSubmitter: number of splits:1
+21/03/20 11:14:47 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0002
+21/03/20 11:14:47 INFO YarnClientImpl: Submitted application application_1616237977131_0002
+21/03/20 11:14:47 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0002/
+21/03/20 11:14:47 INFO Job: Running job: job_1616237977131_0002
+21/03/20 11:14:54 INFO Job: Job job_1616237977131_0002 running in uber mode : false
+21/03/20 11:14:54 INFO Job:  map 0% reduce 0%
+21/03/20 11:15:02 INFO Job:  map 100% reduce 0%
+21/03/20 11:15:13 INFO Job:  map 100% reduce 18%
+21/03/20 11:15:14 INFO Job:  map 100% reduce 27%
+21/03/20 11:15:15 INFO Job:  map 100% reduce 36%
+21/03/20 11:15:16 INFO Job:  map 100% reduce 64%
+21/03/20 11:15:17 INFO Job:  map 100% reduce 100%
+21/03/20 11:15:18 INFO Job: Job job_1616237977131_0002 completed successfully
+21/03/20 11:15:18 INFO Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=5409132
+		FILE: Number of bytes written=13463112
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=11553570
+		HDFS: Number of bytes written=6106511
+		HDFS: Number of read operations=36
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=1
+		Launched reduce tasks=11
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=289488
+		Total time spent by all reduces in occupied slots (ms)=11030304
+		Total time spent by all map tasks (ms)=6031
+		Total time spent by all reduce tasks (ms)=114899
+		Total vcore-milliseconds taken by all map tasks=6031
+		Total vcore-milliseconds taken by all reduce tasks=114899
+		Total megabyte-milliseconds taken by all map tasks=9263616
+		Total megabyte-milliseconds taken by all reduce tasks=352969728
+	Map-Reduce Framework
+		Map input records=1000209
+		Map output records=1000209
+		Map output bytes=7964758
+		Map output materialized bytes=5409088
+		Input split bytes=114
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=6040
+		Reduce shuffle bytes=5409088
+		Reduce input records=1000209
+		Reduce output records=6040
+		Spilled Records=2000418
+		Shuffled Maps =11
+		Failed Shuffles=0
+		Merged Map outputs=11
+		GC time elapsed (ms)=2902
+		CPU time spent (ms)=32830
+		Physical memory (bytes) snapshot=4267884544
+		Virtual memory (bytes) snapshot=54825209856
+		Total committed heap usage (bytes)=3755999232
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=11553456
+	File Output Format Counters 
+		Bytes Written=6106511
+	org.apache.mahout.cf.taste.hadoop.item.ToUserVectorsReducer$Counters
+		USERS=6040
+21/03/20 11:15:19 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:15:19 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:15:19 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:15:19 INFO JobSubmitter: number of splits:11
+21/03/20 11:15:19 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0003
+21/03/20 11:15:19 INFO YarnClientImpl: Submitted application application_1616237977131_0003
+21/03/20 11:15:19 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0003/
+21/03/20 11:15:19 INFO Job: Running job: job_1616237977131_0003
+21/03/20 11:15:26 INFO Job: Job job_1616237977131_0003 running in uber mode : false
+21/03/20 11:15:26 INFO Job:  map 0% reduce 0%
+21/03/20 11:15:37 INFO Job:  map 18% reduce 0%
+21/03/20 11:15:38 INFO Job:  map 27% reduce 0%
+21/03/20 11:15:41 INFO Job:  map 36% reduce 0%
+21/03/20 11:15:42 INFO Job:  map 64% reduce 0%
+21/03/20 11:15:43 INFO Job:  map 100% reduce 0%
+21/03/20 11:15:47 INFO Job:  map 100% reduce 27%
+21/03/20 11:15:50 INFO Job:  map 100% reduce 45%
+21/03/20 11:15:51 INFO Job:  map 100% reduce 64%
+21/03/20 11:15:52 INFO Job:  map 100% reduce 73%
+21/03/20 11:15:53 INFO Job:  map 100% reduce 100%
+21/03/20 11:15:54 INFO Job: Job job_1616237977131_0003 completed successfully
+21/03/20 11:15:54 INFO Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=4144047
+		FILE: Number of bytes written=12582985
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=6108359
+		HDFS: Number of bytes written=6086271
+		HDFS: Number of read operations=77
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=11
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=6701136
+		Total time spent by all reduces in occupied slots (ms)=10079808
+		Total time spent by all map tasks (ms)=139607
+		Total time spent by all reduce tasks (ms)=104998
+		Total vcore-milliseconds taken by all map tasks=139607
+		Total vcore-milliseconds taken by all reduce tasks=104998
+		Total megabyte-milliseconds taken by all map tasks=214436352
+		Total megabyte-milliseconds taken by all reduce tasks=322553856
+	Map-Reduce Framework
+		Map input records=6040
+		Map output records=1000209
+		Map output bytes=16987356
+		Map output materialized bytes=3593887
+		Input split bytes=1848
+		Combine input records=1000209
+		Combine output records=36274
+		Reduce input groups=3706
+		Reduce shuffle bytes=3593887
+		Reduce input records=36274
+		Reduce output records=3706
+		Spilled Records=72548
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=5306
+		CPU time spent (ms)=64670
+		Physical memory (bytes) snapshot=9569918976
+		Virtual memory (bytes) snapshot=88281505792
+		Total committed heap usage (bytes)=7962361856
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6106511
+	File Output Format Counters 
+		Bytes Written=6086271
+21/03/20 11:15:54 INFO AbstractJob: Command line arguments: {--endPhase=[2147483647], --excludeSelfSimilarity=[true], --input=[temp/preparePreferenceMatrix/ratingMatrix], --maxObservationsPerColumn=[500], --maxObservationsPerRow=[500], --maxSimilaritiesPerRow=[100], --numberOfColumns=[6040], --output=[temp/similarityMatrix], --randomSeed=[-9223372036854775808], --similarityClassname=[SIMILARITY_COSINE], --startPhase=[0], --tempDir=[temp], --threshold=[4.9E-324]}
+21/03/20 11:15:54 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:15:54 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:15:55 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:15:55 INFO JobSubmitter: number of splits:11
+21/03/20 11:15:56 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0004
+21/03/20 11:15:56 INFO YarnClientImpl: Submitted application application_1616237977131_0004
+21/03/20 11:15:56 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0004/
+21/03/20 11:15:56 INFO Job: Running job: job_1616237977131_0004
+21/03/20 11:16:03 INFO Job: Job job_1616237977131_0004 running in uber mode : false
+21/03/20 11:16:03 INFO Job:  map 0% reduce 0%
+21/03/20 11:16:13 INFO Job:  map 27% reduce 0%
+21/03/20 11:16:15 INFO Job:  map 36% reduce 0%
+21/03/20 11:16:16 INFO Job:  map 82% reduce 0%
+21/03/20 11:16:17 INFO Job:  map 100% reduce 0%
+21/03/20 11:16:20 INFO Job:  map 100% reduce 100%
+21/03/20 11:16:21 INFO Job: Job job_1616237977131_0004 completed successfully
+21/03/20 11:16:21 INFO Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=324724
+		FILE: Number of bytes written=3295365
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=6088130
+		HDFS: Number of bytes written=60379
+		HDFS: Number of read operations=47
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=3
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=1
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=5218320
+		Total time spent by all reduces in occupied slots (ms)=320448
+		Total time spent by all map tasks (ms)=108715
+		Total time spent by all reduce tasks (ms)=3338
+		Total vcore-milliseconds taken by all map tasks=108715
+		Total vcore-milliseconds taken by all reduce tasks=3338
+		Total megabyte-milliseconds taken by all map tasks=166986240
+		Total megabyte-milliseconds taken by all reduce tasks=10254336
+	Map-Reduce Framework
+		Map input records=3706
+		Map output records=11
+		Map output bytes=651413
+		Map output materialized bytes=325792
+		Input split bytes=1859
+		Combine input records=11
+		Combine output records=11
+		Reduce input groups=1
+		Reduce shuffle bytes=325792
+		Reduce input records=11
+		Reduce output records=0
+		Spilled Records=22
+		Shuffled Maps =11
+		Failed Shuffles=0
+		Merged Map outputs=11
+		GC time elapsed (ms)=2796
+		CPU time spent (ms)=20850
+		Physical memory (bytes) snapshot=6412587008
+		Virtual memory (bytes) snapshot=41450967040
+		Total committed heap usage (bytes)=5724176384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6086271
+	File Output Format Counters 
+		Bytes Written=98
+21/03/20 11:16:21 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:16:21 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:16:21 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:16:21 INFO JobSubmitter: number of splits:11
+21/03/20 11:16:21 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0005
+21/03/20 11:16:22 INFO YarnClientImpl: Submitted application application_1616237977131_0005
+21/03/20 11:16:22 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0005/
+21/03/20 11:16:22 INFO Job: Running job: job_1616237977131_0005
+21/03/20 11:16:29 INFO Job: Job job_1616237977131_0005 running in uber mode : false
+21/03/20 11:16:29 INFO Job:  map 0% reduce 0%
+21/03/20 11:16:41 INFO Job:  map 27% reduce 0%
+21/03/20 11:16:44 INFO Job:  map 45% reduce 0%
+21/03/20 11:16:45 INFO Job:  map 91% reduce 0%
+21/03/20 11:16:46 INFO Job:  map 100% reduce 0%
+21/03/20 11:16:50 INFO Job:  map 100% reduce 9%
+21/03/20 11:16:53 INFO Job:  map 100% reduce 64%
+21/03/20 11:16:54 INFO Job:  map 100% reduce 73%
+21/03/20 11:16:55 INFO Job:  map 100% reduce 82%
+21/03/20 11:16:56 INFO Job:  map 100% reduce 91%
+21/03/20 11:16:57 INFO Job:  map 100% reduce 100%
+21/03/20 11:16:57 INFO Job: Job job_1616237977131_0005 completed successfully
+21/03/20 11:16:57 INFO Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=5803931
+		FILE: Number of bytes written=14082678
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=6751221
+		HDFS: Number of bytes written=6692011
+		HDFS: Number of read operations=88
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=25
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=11
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=6686976
+		Total time spent by all reduces in occupied slots (ms)=9924288
+		Total time spent by all map tasks (ms)=139312
+		Total time spent by all reduce tasks (ms)=103378
+		Total vcore-milliseconds taken by all map tasks=139312
+		Total vcore-milliseconds taken by all reduce tasks=103378
+		Total megabyte-milliseconds taken by all map tasks=213983232
+		Total megabyte-milliseconds taken by all reduce tasks=317577216
+	Map-Reduce Framework
+		Map input records=3706
+		Map output records=655689
+		Map output bytes=13745879
+		Map output materialized bytes=3384534
+		Input split bytes=1859
+		Combine input records=655689
+		Combine output records=62682
+		Reduce input groups=6043
+		Reduce shuffle bytes=3384534
+		Reduce input records=62682
+		Reduce output records=6040
+		Spilled Records=125364
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=5748
+		CPU time spent (ms)=71710
+		Physical memory (bytes) snapshot=9801990144
+		Virtual memory (bytes) snapshot=88334319616
+		Total committed heap usage (bytes)=8038907904
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6086271
+	File Output Format Counters 
+		Bytes Written=6691990
+	org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJob$Counters
+		NEGLECTED_OBSERVATIONS=344553
+		ROWS=3706
+		USED_OBSERVATIONS=655656
+21/03/20 11:16:57 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:16:57 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:16:58 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:16:58 INFO JobSubmitter: number of splits:11
+21/03/20 11:16:58 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0006
+21/03/20 11:16:58 INFO YarnClientImpl: Submitted application application_1616237977131_0006
+21/03/20 11:16:58 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0006/
+21/03/20 11:16:58 INFO Job: Running job: job_1616237977131_0006
+21/03/20 11:17:05 INFO Job: Job job_1616237977131_0006 running in uber mode : false
+21/03/20 11:17:05 INFO Job:  map 0% reduce 0%
+21/03/20 11:17:20 INFO Job:  map 27% reduce 0%
+21/03/20 11:17:23 INFO Job:  map 36% reduce 0%
+21/03/20 11:17:24 INFO Job:  map 64% reduce 0%
+21/03/20 11:17:25 INFO Job:  map 100% reduce 0%
+21/03/20 11:17:32 INFO Job:  map 100% reduce 9%
+21/03/20 11:17:35 INFO Job:  map 100% reduce 55%
+21/03/20 11:17:36 INFO Job:  map 100% reduce 73%
+21/03/20 11:17:37 INFO Job:  map 100% reduce 91%
+21/03/20 11:17:38 INFO Job:  map 100% reduce 100%
+21/03/20 11:17:38 INFO Job: Job job_1616237977131_0006 completed successfully
+21/03/20 11:17:38 INFO Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=269380912
+		FILE: Number of bytes written=547067847
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=6693761
+		HDFS: Number of bytes written=48521584
+		HDFS: Number of read operations=110
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=12
+		Launched reduce tasks=11
+		Data-local map tasks=11
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=8385120
+		Total time spent by all reduces in occupied slots (ms)=11373888
+		Total time spent by all map tasks (ms)=174690
+		Total time spent by all reduce tasks (ms)=118478
+		Total vcore-milliseconds taken by all map tasks=174690
+		Total vcore-milliseconds taken by all reduce tasks=118478
+		Total megabyte-milliseconds taken by all map tasks=268323840
+		Total megabyte-milliseconds taken by all reduce tasks=363964416
+	Map-Reduce Framework
+		Map input records=6040
+		Map output records=655656
+		Map output bytes=776059363
+		Map output materialized bytes=272804960
+		Input split bytes=1540
+		Combine input records=655656
+		Combine output records=35686
+		Reduce input groups=3674
+		Reduce shuffle bytes=272804960
+		Reduce input records=35686
+		Reduce output records=3674
+		Spilled Records=71372
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=6196
+		CPU time spent (ms)=131770
+		Physical memory (bytes) snapshot=12229165056
+		Virtual memory (bytes) snapshot=88471588864
+		Total committed heap usage (bytes)=10188488704
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6691990
+	File Output Format Counters 
+		Bytes Written=48521584
+	org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJob$Counters
+		COOCCURRENCES=76874374
+		PRUNED_COOCCURRENCES=0
+21/03/20 11:17:38 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:17:38 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:17:38 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:17:38 INFO JobSubmitter: number of splits:11
+21/03/20 11:17:39 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0007
+21/03/20 11:17:39 INFO YarnClientImpl: Submitted application application_1616237977131_0007
+21/03/20 11:17:39 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0007/
+21/03/20 11:17:39 INFO Job: Running job: job_1616237977131_0007
+21/03/20 11:17:46 INFO Job: Job job_1616237977131_0007 running in uber mode : false
+21/03/20 11:17:46 INFO Job:  map 0% reduce 0%
+21/03/20 11:18:00 INFO Job:  map 27% reduce 0%
+21/03/20 11:18:02 INFO Job:  map 82% reduce 0%
+21/03/20 11:18:03 INFO Job:  map 100% reduce 0%
+21/03/20 11:18:09 INFO Job:  map 100% reduce 9%
+21/03/20 11:18:10 INFO Job:  map 100% reduce 18%
+21/03/20 11:18:11 INFO Job:  map 100% reduce 27%
+21/03/20 11:18:12 INFO Job:  map 100% reduce 45%
+21/03/20 11:18:13 INFO Job:  map 100% reduce 73%
+21/03/20 11:18:14 INFO Job:  map 100% reduce 100%
+21/03/20 11:18:15 INFO Job: Job job_1616237977131_0007 completed successfully
+21/03/20 11:18:15 INFO Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=31498764
+		FILE: Number of bytes written=67917850
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=48523245
+		HDFS: Number of bytes written=3739727
+		HDFS: Number of read operations=77
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=11
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=7307520
+		Total time spent by all reduces in occupied slots (ms)=10167360
+		Total time spent by all map tasks (ms)=152240
+		Total time spent by all reduce tasks (ms)=105910
+		Total vcore-milliseconds taken by all map tasks=152240
+		Total vcore-milliseconds taken by all reduce tasks=105910
+		Total megabyte-milliseconds taken by all map tasks=233840640
+		Total megabyte-milliseconds taken by all reduce tasks=325355520
+	Map-Reduce Framework
+		Map input records=3674
+		Map output records=4842367
+		Map output bytes=104857953
+		Map output materialized bytes=31567926
+		Input split bytes=1661
+		Combine input records=4842367
+		Combine output records=40156
+		Reduce input groups=3674
+		Reduce shuffle bytes=31567926
+		Reduce input records=40156
+		Reduce output records=3674
+		Spilled Records=80312
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=5569
+		CPU time spent (ms)=96560
+		Physical memory (bytes) snapshot=10323288064
+		Virtual memory (bytes) snapshot=88321331200
+		Total committed heap usage (bytes)=8834252800
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=48521584
+	File Output Format Counters 
+		Bytes Written=3739727
+21/03/20 11:18:15 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:18:15 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:18:16 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:18:16 INFO JobSubmitter: number of splits:11
+21/03/20 11:18:16 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0008
+21/03/20 11:18:16 INFO YarnClientImpl: Submitted application application_1616237977131_0008
+21/03/20 11:18:16 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0008/
+21/03/20 11:18:16 INFO Job: Running job: job_1616237977131_0008
+21/03/20 11:18:24 INFO Job: Job job_1616237977131_0008 running in uber mode : false
+21/03/20 11:18:24 INFO Job:  map 0% reduce 0%
+21/03/20 11:18:35 INFO Job:  map 27% reduce 0%
+21/03/20 11:18:38 INFO Job:  map 55% reduce 0%
+21/03/20 11:18:39 INFO Job:  map 91% reduce 0%
+21/03/20 11:18:40 INFO Job:  map 100% reduce 0%
+21/03/20 11:18:44 INFO Job:  map 100% reduce 9%
+21/03/20 11:18:47 INFO Job:  map 100% reduce 55%
+21/03/20 11:18:48 INFO Job:  map 100% reduce 64%
+21/03/20 11:18:49 INFO Job:  map 100% reduce 73%
+21/03/20 11:18:50 INFO Job:  map 100% reduce 91%
+21/03/20 11:18:51 INFO Job:  map 100% reduce 100%
+21/03/20 11:18:52 INFO Job: Job job_1616237977131_0008 completed successfully
+21/03/20 11:18:52 INFO Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=3792173
+		FILE: Number of bytes written=13336746
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4246497
+		HDFS: Number of bytes written=7963289
+		HDFS: Number of read operations=330
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=11
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=6156816
+		Total time spent by all reduces in occupied slots (ms)=9972576
+		Total time spent by all map tasks (ms)=128267
+		Total time spent by all reduce tasks (ms)=103881
+		Total vcore-milliseconds taken by all map tasks=128267
+		Total vcore-milliseconds taken by all reduce tasks=103881
+		Total megabyte-milliseconds taken by all map tasks=197018112
+		Total megabyte-milliseconds taken by all reduce tasks=319122432
+	Map-Reduce Framework
+		Map input records=3674
+		Map output records=364520
+		Map output bytes=4360823
+		Map output materialized bytes=4692966
+		Input split bytes=1639
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=273340
+		Reduce shuffle bytes=4692966
+		Reduce input records=364520
+		Reduce output records=273340
+		Spilled Records=729040
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=5184
+		CPU time spent (ms)=66550
+		Physical memory (bytes) snapshot=9756028928
+		Virtual memory (bytes) snapshot=88294051840
+		Total committed heap usage (bytes)=8360296448
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=3739727
+	File Output Format Counters 
+		Bytes Written=7963289
+21/03/20 11:18:52 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:18:52 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:18:52 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:18:53 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:18:53 INFO JobSubmitter: number of splits:22
+21/03/20 11:18:53 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0009
+21/03/20 11:18:53 INFO YarnClientImpl: Submitted application application_1616237977131_0009
+21/03/20 11:18:53 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0009/
+21/03/20 11:18:53 INFO Job: Running job: job_1616237977131_0009
+21/03/20 11:19:00 INFO Job: Job job_1616237977131_0009 running in uber mode : false
+21/03/20 11:19:00 INFO Job:  map 0% reduce 0%
+21/03/20 11:19:17 INFO Job:  map 14% reduce 0%
+21/03/20 11:19:18 INFO Job:  map 18% reduce 0%
+21/03/20 11:19:19 INFO Job:  map 27% reduce 0%
+21/03/20 11:19:23 INFO Job:  map 36% reduce 0%
+21/03/20 11:19:24 INFO Job:  map 41% reduce 0%
+21/03/20 11:19:25 INFO Job:  map 68% reduce 0%
+21/03/20 11:19:26 INFO Job:  map 82% reduce 0%
+21/03/20 11:19:27 INFO Job:  map 95% reduce 0%
+21/03/20 11:19:28 INFO Job:  map 100% reduce 0%
+21/03/20 11:19:29 INFO Job:  map 100% reduce 18%
+21/03/20 11:19:30 INFO Job:  map 100% reduce 27%
+21/03/20 11:19:37 INFO Job:  map 100% reduce 45%
+21/03/20 11:19:38 INFO Job:  map 100% reduce 73%
+21/03/20 11:19:39 INFO Job:  map 100% reduce 100%
+21/03/20 11:19:40 INFO Job: Job job_1616237977131_0009 completed successfully
+21/03/20 11:19:40 INFO Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=6991703
+		FILE: Number of bytes written=21866769
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9853795
+		HDFS: Number of bytes written=8297419
+		HDFS: Number of read operations=121
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=22
+		Launched reduce tasks=12
+		Data-local map tasks=22
+		Total time spent by all maps in occupied slots (ms)=22298688
+		Total time spent by all reduces in occupied slots (ms)=11539008
+		Total time spent by all map tasks (ms)=464556
+		Total time spent by all reduce tasks (ms)=120198
+		Total vcore-milliseconds taken by all map tasks=464556
+		Total vcore-milliseconds taken by all reduce tasks=120198
+		Total megabyte-milliseconds taken by all map tasks=713558016
+		Total megabyte-milliseconds taken by all reduce tasks=369248256
+	Map-Reduce Framework
+		Map input records=9714
+		Map output records=1003883
+		Map output bytes=11198260
+		Map output materialized bytes=7598234
+		Input split bytes=7557
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3706
+		Reduce shuffle bytes=7598234
+		Reduce input records=1003883
+		Reduce output records=3674
+		Spilled Records=2007766
+		Shuffled Maps =242
+		Failed Shuffles=0
+		Merged Map outputs=242
+		GC time elapsed (ms)=10653
+		CPU time spent (ms)=87400
+		Physical memory (bytes) snapshot=15080914944
+		Virtual memory (bytes) snapshot=124872527872
+		Total committed heap usage (bytes)=12546211840
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=8297419
+21/03/20 11:19:40 INFO deprecation: io.sort.factor is deprecated. Instead, use mapreduce.task.io.sort.factor
+21/03/20 11:19:40 INFO deprecation: mapred.map.child.java.opts is deprecated. Instead, use mapreduce.map.java.opts
+21/03/20 11:19:40 INFO deprecation: io.sort.mb is deprecated. Instead, use mapreduce.task.io.sort.mb
+21/03/20 11:19:40 INFO deprecation: mapred.task.timeout is deprecated. Instead, use mapreduce.task.timeout
+21/03/20 11:19:40 INFO RMProxy: Connecting to ResourceManager at ip-10-0-0-38.ec2.internal/10.0.0.38:8032
+21/03/20 11:19:40 INFO AHSProxy: Connecting to Application History server at ip-10-0-0-38.ec2.internal/10.0.0.38:10200
+21/03/20 11:19:41 INFO FileInputFormat: Total input files to process : 11
+21/03/20 11:19:41 INFO JobSubmitter: number of splits:11
+21/03/20 11:19:41 INFO JobSubmitter: Submitting tokens for job: job_1616237977131_0010
+21/03/20 11:19:41 INFO YarnClientImpl: Submitted application application_1616237977131_0010
+21/03/20 11:19:41 INFO Job: The url to track the job: http://ip-10-0-0-38.ec2.internal:20888/proxy/application_1616237977131_0010/
+21/03/20 11:19:41 INFO Job: Running job: job_1616237977131_0010
+21/03/20 11:19:48 INFO Job: Job job_1616237977131_0010 running in uber mode : false
+21/03/20 11:19:48 INFO Job:  map 0% reduce 0%
+21/03/20 11:19:59 INFO Job:  map 9% reduce 0%
+21/03/20 11:20:00 INFO Job:  map 27% reduce 0%
+21/03/20 11:20:03 INFO Job:  map 82% reduce 0%
+21/03/20 11:20:04 INFO Job:  map 100% reduce 0%
+21/03/20 11:20:16 INFO Job:  map 100% reduce 27%
+21/03/20 11:20:20 INFO Job:  map 100% reduce 45%
+21/03/20 11:20:21 INFO Job:  map 100% reduce 73%
+21/03/20 11:20:22 INFO Job:  map 100% reduce 91%
+21/03/20 11:20:23 INFO Job:  map 100% reduce 100%
+21/03/20 11:20:23 INFO Job: Job job_1616237977131_0010 completed successfully
+21/03/20 11:20:23 INFO Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=143495746
+		FILE: Number of bytes written=240352214
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=8804178
+		HDFS: Number of bytes written=592390
+		HDFS: Number of read operations=330
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=22
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=11
+		Launched reduce tasks=12
+		Data-local map tasks=11
+		Total time spent by all maps in occupied slots (ms)=6389808
+		Total time spent by all reduces in occupied slots (ms)=18178272
+		Total time spent by all map tasks (ms)=133121
+		Total time spent by all reduce tasks (ms)=189357
+		Total vcore-milliseconds taken by all map tasks=133121
+		Total vcore-milliseconds taken by all reduce tasks=189357
+		Total megabyte-milliseconds taken by all map tasks=204473856
+		Total megabyte-milliseconds taken by all reduce tasks=581704704
+	Map-Reduce Framework
+		Map input records=3674
+		Map output records=245896
+		Map output bytes=151412493
+		Map output materialized bytes=92006805
+		Input split bytes=1628
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=6040
+		Reduce shuffle bytes=92006805
+		Reduce input records=245896
+		Reduce output records=6040
+		Spilled Records=491792
+		Shuffled Maps =121
+		Failed Shuffles=0
+		Merged Map outputs=121
+		GC time elapsed (ms)=5860
+		CPU time spent (ms)=143870
+		Physical memory (bytes) snapshot=16151613440
+		Virtual memory (bytes) snapshot=88325898240
+		Total committed heap usage (bytes)=14424735744
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=8297419
+	File Output Format Counters 
+		Bytes Written=592390
+21/03/20 11:20:23 INFO MahoutDriver: Program took 371012 ms (Minutes: 6.183533333333333)
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ hadoop fs -ls recommendations
+Found 12 items
+-rw-r--r--   1 hadoop hadoop          0 2021-03-20 11:20 recommendations/_SUCCESS
+-rw-r--r--   1 hadoop hadoop      53558 2021-03-20 11:20 recommendations/part-r-00000
+-rw-r--r--   1 hadoop hadoop      54075 2021-03-20 11:20 recommendations/part-r-00001
+-rw-r--r--   1 hadoop hadoop      53855 2021-03-20 11:20 recommendations/part-r-00002
+-rw-r--r--   1 hadoop hadoop      53212 2021-03-20 11:20 recommendations/part-r-00003
+-rw-r--r--   1 hadoop hadoop      54073 2021-03-20 11:20 recommendations/part-r-00004
+-rw-r--r--   1 hadoop hadoop      53276 2021-03-20 11:20 recommendations/part-r-00005
+-rw-r--r--   1 hadoop hadoop      53769 2021-03-20 11:20 recommendations/part-r-00006
+-rw-r--r--   1 hadoop hadoop      53746 2021-03-20 11:20 recommendations/part-r-00007
+-rw-r--r--   1 hadoop hadoop      54303 2021-03-20 11:20 recommendations/part-r-00008
+-rw-r--r--   1 hadoop hadoop      54589 2021-03-20 11:20 recommendations/part-r-00009
+-rw-r--r--   1 hadoop hadoop      53934 2021-03-20 11:20 recommendations/part-r-00010
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ hadoop fs -cat recommendations/part-r-00000 | head
+11	[2375:5.0,1719:5.0,265:5.0,529:5.0,2243:5.0,1449:5.0,3298:5.0,2111:5.0,2112:5.0,1183:5.0]
+22	[2968:5.0,265:5.0,1517:5.0,2804:5.0,529:5.0,1912:5.0,1682:5.0,2144:5.0,3100:5.0,562:5.0]
+33	[2112:5.0,529:5.0,1188:5.0,1584:5.0,3167:5.0,265:5.0,3430:5.0,3035:5.0,2110:5.0,2376:5.0]
+44	[265:5.0,2375:5.0,3035:5.0,1584:5.0,3429:5.0,529:5.0,3298:5.0,1188:5.0,3034:5.0,2243:5.0]
+55	[1912:5.0,2641:5.0,3100:5.0,1584:5.0,529:5.0,2571:5.0,198:5.0,594:5.0,2572:5.0,1385:5.0]
+66	[2243:5.0,1120:5.0,1912:5.0,2706:5.0,1449:5.0,3300:5.0,3298:5.0,3100:5.0,529:5.0,3893:5.0]
+77	[1:5.0,2108:5.0,3260:5.0,36:5.0,1916:5.0,3424:5.0,2076:5.0,1719:5.0,1945:5.0,3361:5.0]
+88	[2969:5.0,1914:5.0,3100:5.0,1188:5.0,2112:5.0,3167:5.0,1913:5.0,1253:5.0,3035:5.0,1912:5.0]
+99	[2572:5.0,1912:5.0,3100:5.0,1517:5.0,3035:5.0,1584:5.0,198:5.0,3298:5.0,594:5.0,529:5.0]
+110	[858:5.0,1120:5.0,3100:5.0,529:5.0,1449:5.0,2966:5.0,198:5.0,3298:5.0,265:5.0,3893:5.0]
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ sudo easy_install twisted
+Searching for twisted
+Reading https://pypi.python.org/simple/twisted/
+Downloading https://files.pythonhosted.org/packages/c2/41/3f30da0f7025480eff8feb9ef0927c6db6bbbf6e64985cac77ee0210a903/Twisted-21.2.0.tar.gz#sha256=77544a8945cf69b98d2946689bbe0c75de7d145cdf11f391dd487eae8fc95a12
+Best match: Twisted 21.2.0
+Processing Twisted-21.2.0.tar.gz
+Writing /tmp/easy_install-TJbebN/Twisted-21.2.0/setup.cfg
+Running Twisted-21.2.0/setup.py -q bdist_egg --dist-dir /tmp/easy_install-TJbebN/Twisted-21.2.0/egg-dist-tmp-Il2ICz
+Traceback (most recent call last):
+  File "/bin/easy_install", line 11, in <module>
+    sys.exit(main())
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 2309, in main
+    **kw
+  File "/usr/lib/python2.7/site-packages/setuptools/__init__.py", line 129, in setup
+    return distutils.core.setup(**attrs)
+  File "/usr/lib64/python2.7/distutils/core.py", line 151, in setup
+    dist.run_commands()
+  File "/usr/lib64/python2.7/distutils/dist.py", line 953, in run_commands
+    self.run_command(cmd)
+  File "/usr/lib64/python2.7/distutils/dist.py", line 972, in run_command
+    cmd_obj.run()
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 411, in run
+    self.easy_install(spec, not self.no_deps)
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 672, in easy_install
+    return self.install_item(spec, dist.location, tmpdir, deps)
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 698, in install_item
+    dists = self.install_eggs(spec, download, tmpdir)
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 881, in install_eggs
+    return self.build_and_install(setup_script, setup_base)
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 1149, in build_and_install
+    self.run_setup(setup_script, setup_base, args)
+  File "/usr/lib/python2.7/site-packages/setuptools/command/easy_install.py", line 1135, in run_setup
+    run_setup(setup_script, args)
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 253, in run_setup
+    raise
+  File "/usr/lib64/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 195, in setup_context
+    yield
+  File "/usr/lib64/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 166, in save_modules
+    saved_exc.resume()
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 141, in resume
+    six.reraise(type, exc, self._tb)
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 154, in save_modules
+    yield saved
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 195, in setup_context
+    yield
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 250, in run_setup
+    _execfile(setup_script, ns)
+  File "/usr/lib/python2.7/site-packages/setuptools/sandbox.py", line 45, in _execfile
+    exec(code, globals, locals)
+  File "/tmp/easy_install-TJbebN/Twisted-21.2.0/setup.py", line 10, in <module>
+ImportError: No module named pathlib
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ python3 install twisted
+python3: can't open file 'install': [Errno 2] No such file or directory
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ sudo python3 install twisted
+python3: can't open file 'install': [Errno 2] No such file or directory
+[hadoop@ip-10-0-0-38 ~]$ pip3
+
+Usage:   
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to WARNING, ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host as trusted, even though it does not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for download. Implied with --no-index.
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ 
+[hadoop@ip-10-0-0-38 ~]$ pip3 install twisted
+Collecting twisted
+  Downloading https://files.pythonhosted.org/packages/f2/16/3eb9c66a7bfb5220c7bcbaaac33d359fe8a157b028959cd210983749b2e0/Twisted-21.2.0-py3-none-any.whl (3.1MB)
+    100% |████████████████████████████████| 3.1MB 436kB/s 
+Collecting constantly>=15.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/b9/65/48c1909d0c0aeae6c10213340ce682db01b48ea900a7d9fce7a7910ff318/constantly-15.1.0-py2.py3-none-any.whl
+Collecting incremental>=16.10.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/99/3b/4f80dd10cb716f3a9e22ae88f026d25c47cc3fdf82c2747f3d59c98e4ff1/incremental-21.3.0-py2.py3-none-any.whl
+Collecting hyperlink>=17.1.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/6e/aa/8caf6a0a3e62863cbb9dab27135660acba46903b703e224f14f447e57934/hyperlink-21.0.0-py2.py3-none-any.whl (74kB)
+    100% |████████████████████████████████| 81kB 11.6MB/s 
+Collecting zope.interface>=4.4.2 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/2d/6b/8c3873b8671d0bbba6adffc2294f37f1ed98171c706321bf96ff03dca346/zope.interface-5.2.0-cp37-cp37m-manylinux1_x86_64.whl (237kB)
+    100% |████████████████████████████████| 245kB 5.4MB/s 
+Collecting attrs>=19.2.0 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/c3/aa/cb45262569fcc047bf070b5de61813724d6726db83259222cd7b4c79821a/attrs-20.3.0-py2.py3-none-any.whl (49kB)
+    100% |████████████████████████████████| 51kB 10.3MB/s 
+Collecting Automat>=0.8.0 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/dd/83/5f6f3c1a562674d65efc320257bdc0873ec53147835aeef7762fe7585273/Automat-20.2.0-py2.py3-none-any.whl
+Collecting idna>=2.5 (from hyperlink>=17.1.1->twisted)
+  Downloading https://files.pythonhosted.org/packages/29/88/c52aae187d3b128a0f13f36a6c987fc0d408d03a678ad9996516925d8495/idna-3.1-py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 10.3MB/s 
+Requirement already satisfied: setuptools in /usr/lib/python3.7/site-packages (from zope.interface>=4.4.2->twisted)
+Requirement already satisfied: six in /usr/local/lib/python3.7/site-packages (from Automat>=0.8.0->twisted)
+Installing collected packages: constantly, incremental, idna, hyperlink, zope.interface, attrs, Automat, twisted
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/usr/lib/python3.7/site-packages/pip/commands/install.py", line 365, in run
+    strip_file_prefix=options.strip_file_prefix,
+  File "/usr/lib/python3.7/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/usr/lib/python3.7/site-packages/pip/req/req_install.py", line 854, in install
+    strip_file_prefix=strip_file_prefix
+  File "/usr/lib/python3.7/site-packages/pip/req/req_install.py", line 1069, in move_wheel_files
+    strip_file_prefix=strip_file_prefix,
+  File "/usr/lib/python3.7/site-packages/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/usr/lib/python3.7/site-packages/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/usr/lib/python3.7/site-packages/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/usr/lib64/python3.7/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/usr/local/lib/python3.7/site-packages/constantly'
+[hadoop@ip-10-0-0-38 ~]$ sudo pip3 install twisted
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+Collecting twisted
+  Downloading https://files.pythonhosted.org/packages/f2/16/3eb9c66a7bfb5220c7bcbaaac33d359fe8a157b028959cd210983749b2e0/Twisted-21.2.0-py3-none-any.whl (3.1MB)
+    100% |████████████████████████████████| 3.1MB 437kB/s 
+Collecting Automat>=0.8.0 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/dd/83/5f6f3c1a562674d65efc320257bdc0873ec53147835aeef7762fe7585273/Automat-20.2.0-py2.py3-none-any.whl
+Collecting zope.interface>=4.4.2 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/2d/6b/8c3873b8671d0bbba6adffc2294f37f1ed98171c706321bf96ff03dca346/zope.interface-5.2.0-cp37-cp37m-manylinux1_x86_64.whl (237kB)
+    100% |████████████████████████████████| 245kB 4.0MB/s 
+Collecting hyperlink>=17.1.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/6e/aa/8caf6a0a3e62863cbb9dab27135660acba46903b703e224f14f447e57934/hyperlink-21.0.0-py2.py3-none-any.whl (74kB)
+    100% |████████████████████████████████| 81kB 11.5MB/s 
+Collecting attrs>=19.2.0 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/c3/aa/cb45262569fcc047bf070b5de61813724d6726db83259222cd7b4c79821a/attrs-20.3.0-py2.py3-none-any.whl (49kB)
+    100% |████████████████████████████████| 51kB 10.7MB/s 
+Collecting constantly>=15.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/b9/65/48c1909d0c0aeae6c10213340ce682db01b48ea900a7d9fce7a7910ff318/constantly-15.1.0-py2.py3-none-any.whl
+Collecting incremental>=16.10.1 (from twisted)
+  Downloading https://files.pythonhosted.org/packages/99/3b/4f80dd10cb716f3a9e22ae88f026d25c47cc3fdf82c2747f3d59c98e4ff1/incremental-21.3.0-py2.py3-none-any.whl
+Requirement already satisfied: six in /usr/local/lib/python3.7/site-packages (from Automat>=0.8.0->twisted)
+Requirement already satisfied: setuptools in /usr/lib/python3.7/site-packages (from zope.interface>=4.4.2->twisted)
+Collecting idna>=2.5 (from hyperlink>=17.1.1->twisted)
+  Downloading https://files.pythonhosted.org/packages/29/88/c52aae187d3b128a0f13f36a6c987fc0d408d03a678ad9996516925d8495/idna-3.1-py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 10.8MB/s 
+Installing collected packages: attrs, Automat, zope.interface, idna, hyperlink, constantly, incremental, twisted
+Successfully installed Automat-20.2.0 attrs-20.3.0 constantly-15.1.0 hyperlink-21.0.0 idna-3.1 incremental-21.3.0 twisted-21.2.0 zope.interface-5.2.0
+[hadoop@ip-10-0-0-38 ~]$ sudo pip3 install klein
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+Collecting klein
+  Downloading https://files.pythonhosted.org/packages/4b/c6/b8bb2eec20538cfb9221351c3d6d769bf0da5baebf0323334774fe3077a1/klein-20.6.0-py2.py3-none-any.whl (118kB)
+    100% |████████████████████████████████| 122kB 6.2MB/s 
+Requirement already satisfied: attrs in /usr/local/lib/python3.7/site-packages (from klein)
+Requirement already satisfied: incremental in /usr/local/lib/python3.7/site-packages (from klein)
+Requirement already satisfied: six in /usr/local/lib/python3.7/site-packages (from klein)
+Collecting Tubes (from klein)
+  Downloading https://files.pythonhosted.org/packages/f2/c4/f11f6e63856fd4307a905c6adf52967b5951197ad52efd847cb1b37d1c5d/Tubes-0.2.0-py2.py3-none-any.whl (58kB)
+    100% |████████████████████████████████| 61kB 9.8MB/s 
+Requirement already satisfied: Twisted>=15.5 in /usr/local/lib64/python3.7/site-packages (from klein)
+Collecting Werkzeug (from klein)
+  Downloading https://files.pythonhosted.org/packages/cc/94/5f7079a0e00bd6863ef8f1da638721e9da21e5bacee597595b318f71d62e/Werkzeug-1.0.1-py2.py3-none-any.whl (298kB)
+    100% |████████████████████████████████| 307kB 4.1MB/s 
+Requirement already satisfied: hyperlink in /usr/local/lib/python3.7/site-packages (from klein)
+Requirement already satisfied: zope.interface in /usr/local/lib64/python3.7/site-packages (from klein)
+Collecting characteristic (from Tubes->klein)
+  Downloading https://files.pythonhosted.org/packages/fa/0d/7fa43a50feaa8896e9acbb91d2256dc1341e8f9a0be629138490ee1f849e/characteristic-14.3.0-py2.py3-none-any.whl
+Requirement already satisfied: Automat>=0.8.0 in /usr/local/lib/python3.7/site-packages (from Twisted>=15.5->klein)
+Requirement already satisfied: constantly>=15.1 in /usr/local/lib/python3.7/site-packages (from Twisted>=15.5->klein)
+Requirement already satisfied: idna>=2.5 in /usr/local/lib/python3.7/site-packages (from hyperlink->klein)
+Requirement already satisfied: setuptools in /usr/lib/python3.7/site-packages (from zope.interface->klein)
+Installing collected packages: characteristic, Tubes, Werkzeug, klein
+Successfully installed Tubes-0.2.0 Werkzeug-1.0.1 characteristic-14.3.0 klein-20.6.0
+[hadoop@ip-10-0-0-38 ~]$ sudo pip3 install redis
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip3 install --user` instead.
+Collecting redis
+  Downloading https://files.pythonhosted.org/packages/a7/7c/24fb0511df653cf1a5d938d8f5d19802a88cef255706fdda242ff97e91b7/redis-3.5.3-py2.py3-none-any.whl (72kB)
+    100% |████████████████████████████████| 81kB 7.7MB/s 
+Installing collected packages: redis
+Successfully installed redis-3.5.3
+[hadoop@ip-10-0-0-38 ~]$ wget http://download.redis.io/releases/redis-2.8.7.tar.gz
+--2021-03-20 11:36:56--  http://download.redis.io/releases/redis-2.8.7.tar.gz
+Resolving download.redis.io (download.redis.io)... 45.60.121.1
+Connecting to download.redis.io (download.redis.io)|45.60.121.1|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1064262 (1.0M) [application/octet-stream]
+Saving to: ‘redis-2.8.7.tar.gz’
+
+100%[=================================================================================================================================================================>] 1,064,262   --.-K/s   in 0.02s   
+
+2021-03-20 11:36:56 (41.4 MB/s) - ‘redis-2.8.7.tar.gz’ saved [1064262/1064262]
+
+[hadoop@ip-10-0-0-38 ~]$ tar xzf redis-2.8.7.tar.gz
+[hadoop@ip-10-0-0-38 ~]$ cd redis-2.8.7
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ make
+cd src && make all
+make[1]: Entering directory `/home/hadoop/redis-2.8.7/src'
+rm -rf redis-server redis-sentinel redis-cli redis-benchmark redis-check-dump redis-check-aof *.o *.gcda *.gcno *.gcov redis.info lcov-html
+(cd ../deps && make distclean)
+make[2]: Entering directory `/home/hadoop/redis-2.8.7/deps'
+(cd hiredis && make clean) > /dev/null || true
+(cd linenoise && make clean) > /dev/null || true
+(cd lua && make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && make distclean) > /dev/null || true
+(rm -f .make-*)
+make[2]: Leaving directory `/home/hadoop/redis-2.8.7/deps'
+(rm -f .make-*)
+echo STD=-std=c99 -pedantic >> .make-settings
+echo WARN=-Wall >> .make-settings
+echo OPT=-O2 >> .make-settings
+echo MALLOC=jemalloc >> .make-settings
+echo CFLAGS= >> .make-settings
+echo LDFLAGS= >> .make-settings
+echo REDIS_CFLAGS= >> .make-settings
+echo REDIS_LDFLAGS= >> .make-settings
+echo PREV_FINAL_CFLAGS=-std=c99 -pedantic -Wall -O2 -g -ggdb   -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src -DUSE_JEMALLOC -I../deps/jemalloc/include >> .make-settings
+echo PREV_FINAL_LDFLAGS=  -g -ggdb -rdynamic >> .make-settings
+(cd ../deps && make hiredis linenoise lua jemalloc)
+make[2]: Entering directory `/home/hadoop/redis-2.8.7/deps'
+(cd hiredis && make clean) > /dev/null || true
+(cd linenoise && make clean) > /dev/null || true
+(cd lua && make clean) > /dev/null || true
+(cd jemalloc && [ -f Makefile ] && make distclean) > /dev/null || true
+(rm -f .make-*)
+(echo "" > .make-cflags)
+(echo "" > .make-ldflags)
+MAKE hiredis
+cd hiredis && make static
+make[3]: Entering directory `/home/hadoop/redis-2.8.7/deps/hiredis'
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+In file included from /usr/include/sys/types.h:25:0,
+                 from net.c:34:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  hiredis.c
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/string.h:26,
+                 from hiredis.c:33:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  sds.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  async.c
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdlib.h:25,
+                 from async.c:33:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+ar rcs libhiredis.a net.o hiredis.o sds.o async.o
+make[3]: Leaving directory `/home/hadoop/redis-2.8.7/deps/hiredis'
+MAKE linenoise
+cd linenoise && make
+make[3]: Entering directory `/home/hadoop/redis-2.8.7/deps/linenoise'
+cc  -Wall -Os -g  -c linenoise.c
+make[3]: Leaving directory `/home/hadoop/redis-2.8.7/deps/linenoise'
+MAKE lua
+cd lua/src && make all CFLAGS="-O2 -Wall -DLUA_ANSI " MYLDFLAGS=""
+make[3]: Entering directory `/home/hadoop/redis-2.8.7/deps/lua/src'
+cc -O2 -Wall -DLUA_ANSI    -c -o lapi.o lapi.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lcode.o lcode.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ldebug.o ldebug.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ldo.o ldo.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ldump.o ldump.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lfunc.o lfunc.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lgc.o lgc.c
+cc -O2 -Wall -DLUA_ANSI    -c -o llex.o llex.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lmem.o lmem.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lobject.o lobject.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lopcodes.o lopcodes.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lparser.o lparser.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lstate.o lstate.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lstring.o lstring.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ltable.o ltable.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ltm.o ltm.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lundump.o lundump.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lvm.o lvm.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lzio.o lzio.c
+cc -O2 -Wall -DLUA_ANSI    -c -o strbuf.o strbuf.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lauxlib.o lauxlib.c
+lauxlib.c: In function ‘luaL_loadfile’:
+lauxlib.c:577:4: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+    while ((c = getc(lf.f)) != EOF && c != LUA_SIGNATURE[0]) ;
+    ^~~~~
+lauxlib.c:578:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+     lf.extraline = 0;
+     ^~
+cc -O2 -Wall -DLUA_ANSI    -c -o lbaselib.o lbaselib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ldblib.o ldblib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o liolib.o liolib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lmathlib.o lmathlib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o loslib.o loslib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o ltablib.o ltablib.c
+ltablib.c: In function ‘addfield’:
+ltablib.c:137:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (!lua_isstring(L, -1))
+   ^~
+ltablib.c:140:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     luaL_addvalue(b);
+     ^~~~~~~~~~~~~
+cc -O2 -Wall -DLUA_ANSI    -c -o lstrlib.o lstrlib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o loadlib.o loadlib.c
+cc -O2 -Wall -DLUA_ANSI    -c -o linit.o linit.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lua_cjson.o lua_cjson.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lua_struct.o lua_struct.c
+cc -O2 -Wall -DLUA_ANSI    -c -o lua_cmsgpack.o lua_cmsgpack.c
+lua_cmsgpack.c: In function ‘table_is_an_array’:
+lua_cmsgpack.c:370:21: warning: variable ‘max’ set but not used [-Wunused-but-set-variable]
+     long count = 0, max = 0, idx = 0;
+                     ^~~
+ar rcu liblua.a lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o strbuf.o lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o loadlib.o linit.o lua_cjson.o lua_struct.o lua_cmsgpack.o	# DLL needs all object files
+ranlib liblua.a
+cc -O2 -Wall -DLUA_ANSI    -c -o lua.o lua.c
+cc -o lua  lua.o liblua.a -lm 
+liblua.a(loslib.o): In function `os_tmpname':
+loslib.c:(.text+0x27c): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+cc -O2 -Wall -DLUA_ANSI    -c -o luac.o luac.c
+cc -O2 -Wall -DLUA_ANSI    -c -o print.o print.c
+cc -o luac  luac.o print.o liblua.a -lm 
+make[3]: Leaving directory `/home/hadoop/redis-2.8.7/deps/lua/src'
+MAKE jemalloc
+cd jemalloc && ./configure --with-jemalloc-prefix=je_ --enable-cc-silence CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops " LDFLAGS=""
+checking for xsltproc... /usr/bin/xsltproc
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking size of void *... 8
+checking size of int... 4
+checking size of long... 8
+checking size of intmax_t... 8
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking whether __asm__ syntax is compilable... yes
+checking whether __attribute__ syntax is compilable... yes
+checking whether compiler supports -fvisibility=hidden... yes
+checking whether compiler supports -Werror... yes
+checking whether tls_model attribute is compilable... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking for ld... /usr/bin/ld
+checking for autoconf... no
+checking for memalign... yes
+checking for valloc... yes
+checking configured backtracing method... N/A
+checking for sbrk... yes
+checking whether utrace(2) is compilable... no
+checking whether valgrind is compilable... no
+checking STATIC_PAGE_SHIFT... 12
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking for _malloc_thread_cleanup... no
+checking for _pthread_mutex_init_calloc_cb... no
+checking for TLS... yes
+checking whether a program using ffsl is compilable... yes
+checking whether atomic(9) is compilable... no
+checking whether Darwin OSAtomic*() is compilable... no
+checking whether to force 32-bit __sync_{add,sub}_and_fetch()... no
+checking whether to force 64-bit __sync_{add,sub}_and_fetch()... no
+checking whether Darwin OSSpin*() is compilable... no
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/html.xsl
+config.status: creating doc/manpages.xsl
+config.status: creating doc/jemalloc.xml
+config.status: creating include/jemalloc/jemalloc.h
+config.status: creating include/jemalloc/internal/jemalloc_internal.h
+config.status: creating test/jemalloc_test.h
+config.status: creating config.stamp
+config.status: creating bin/jemalloc.sh
+config.status: creating include/jemalloc/jemalloc_defs.h
+config.status: executing include/jemalloc/internal/size_classes.h commands
+===============================================================================
+jemalloc version   : 3.2.0-0-g87499f6748ebe4817571e817e9f680ccb5bf54a9
+library revision   : 1
+
+CC                 : gcc
+CPPFLAGS           :  -D_GNU_SOURCE -D_REENTRANT
+CFLAGS             : -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden
+LDFLAGS            : 
+LIBS               :  -lm -lpthread
+RPATH_EXTRA        : 
+
+XSLTPROC           : /usr/bin/xsltproc
+XSLROOT            : 
+
+PREFIX             : /usr/local
+BINDIR             : /usr/local/bin
+INCLUDEDIR         : /usr/local/include
+LIBDIR             : /usr/local/lib
+DATADIR            : /usr/local/share
+MANDIR             : /usr/local/share/man
+
+srcroot            : 
+abs_srcroot        : /home/hadoop/redis-2.8.7/deps/jemalloc/
+objroot            : 
+abs_objroot        : /home/hadoop/redis-2.8.7/deps/jemalloc/
+
+JEMALLOC_PREFIX    : je_
+JEMALLOC_PRIVATE_NAMESPACE
+                   : 
+install_suffix     : 
+autogen            : 0
+experimental       : 1
+cc-silence         : 1
+debug              : 0
+stats              : 1
+prof               : 0
+prof-libunwind     : 0
+prof-libgcc        : 0
+prof-gcc           : 0
+tcache             : 1
+fill               : 1
+utrace             : 0
+valgrind           : 0
+xmalloc            : 0
+mremap             : 0
+munmap             : 0
+dss                : 0
+lazy_lock          : 0
+tls                : 1
+===============================================================================
+cd jemalloc && make CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops " LDFLAGS="" lib/libjemalloc.a
+make[3]: Entering directory `/home/hadoop/redis-2.8.7/deps/jemalloc'
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/jemalloc.o src/jemalloc.c
+src/jemalloc.c: In function ‘je_realloc’:
+src/jemalloc.c:1082:9: warning: variable ‘old_rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t old_rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~~~~~
+src/jemalloc.c: In function ‘je_free’:
+src/jemalloc.c:1230:10: warning: variable ‘rzsize’ set but not used [-Wunused-but-set-variable]
+   size_t rzsize JEMALLOC_CC_SILENCE_INIT(0);
+          ^~~~~~
+src/jemalloc.c: In function ‘je_rallocm’:
+src/jemalloc.c:1477:9: warning: variable ‘old_rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t old_rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~~~~~
+src/jemalloc.c: In function ‘je_dallocm’:
+src/jemalloc.c:1622:9: warning: variable ‘rzsize’ set but not used [-Wunused-but-set-variable]
+  size_t rzsize JEMALLOC_CC_SILENCE_INIT(0);
+         ^~~~~~
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/arena.o src/arena.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/atomic.o src/atomic.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/base.o src/base.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/bitmap.o src/bitmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk.o src/chunk.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk_dss.o src/chunk_dss.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/chunk_mmap.o src/chunk_mmap.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ckh.o src/ckh.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/ctl.o src/ctl.c
+src/ctl.c: In function ‘epoch_ctl’:
+src/ctl.c:1112:11: warning: variable ‘newval’ set but not used [-Wunused-but-set-variable]
+  uint64_t newval;
+           ^~~~~~
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/extent.o src/extent.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/hash.o src/hash.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/huge.o src/huge.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mb.o src/mb.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/mutex.o src/mutex.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/prof.o src/prof.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/quarantine.o src/quarantine.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/rtree.o src/rtree.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/stats.o src/stats.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tcache.o src/tcache.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/util.o src/util.c
+gcc -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -c -D_GNU_SOURCE -D_REENTRANT -Iinclude -Iinclude -o src/tsd.o src/tsd.c
+ar crus lib/libjemalloc.a src/jemalloc.o src/arena.o src/atomic.o src/base.o src/bitmap.o src/chunk.o src/chunk_dss.o src/chunk_mmap.o src/ckh.o src/ctl.o src/extent.o src/hash.o src/huge.o src/mb.o src/mutex.o src/prof.o src/quarantine.o src/rtree.o src/stats.o src/tcache.o src/util.o src/tsd.o
+make[3]: Leaving directory `/home/hadoop/redis-2.8.7/deps/jemalloc'
+make[2]: Leaving directory `/home/hadoop/redis-2.8.7/deps'
+    CC adlist.o
+    CC ae.o
+    CC anet.o
+In file included from /usr/include/sys/types.h:25:0,
+                 from anet.c:33:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC dict.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdio.h:27,
+                 from dict.c:38:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC redis.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from redis.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC sds.o
+    CC zmalloc.o
+    CC lzf_c.o
+In file included from lzf_c.c:37:0:
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !STRICT_ALIGN
+      ^~~~~~~~~~~~
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+lzf_c.c: In function ‘lzf_compress’:
+lzf_c.c:158:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if STRICT_ALIGN
+     ^~~~~~~~~~~~
+lzf_c.c:158:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    CC lzf_d.o
+In file included from lzf_d.c:37:0:
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !STRICT_ALIGN
+      ^~~~~~~~~~~~
+lzfP.h:131:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    CC pqsort.o
+    CC zipmap.o
+    CC sha1.o
+    CC ziplist.o
+    CC release.o
+    CC networking.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from networking.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC util.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdlib.h:25,
+                 from util.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC object.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from object.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC db.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from db.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC replication.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from replication.c:32:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC rdb.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from rdb.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC t_string.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from t_string.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC t_list.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from t_list.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC t_set.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from t_set.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC t_zset.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from t_zset.c:52:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC t_hash.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from t_hash.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC config.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from config.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC aof.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from aof.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC pubsub.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from pubsub.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC multi.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from multi.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC debug.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from debug.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC sort.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from sort.c:32:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC intset.o
+    CC syncio.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from syncio.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC migrate.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from migrate.c:1:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC endianconv.o
+    CC slowlog.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from slowlog.c:42:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC scripting.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from scripting.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC bio.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from bio.c:61:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC rio.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/string.h:26,
+                 from rio.c:49:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC rand.o
+    CC memtest.o
+    CC crc64.o
+    CC bitops.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from bitops.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC sentinel.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from sentinel.c:31:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC notify.o
+In file included from config.h:90:0,
+                 from redis.h:34,
+                 from notify.c:30:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    CC setproctitle.o
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if !HAVE_SETPROCTITLE
+      ^~~~~~~~~~~~~~~~~
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+setproctitle.c:46:6: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+    LINK redis-server
+    INSTALL redis-sentinel
+    CC redis-cli.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdio.h:27,
+                 from redis-cli.c:34:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    LINK redis-cli
+    CC redis-benchmark.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdio.h:27,
+                 from redis-benchmark.c:33:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    LINK redis-benchmark
+    CC redis-check-dump.o
+    LINK redis-check-dump
+    CC redis-check-aof.o
+In file included from /usr/include/bits/libc-header-start.h:33:0,
+                 from /usr/include/stdlib.h:25,
+                 from redis-check-aof.c:32:
+/usr/include/features.h:183:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+ # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+   ^~~~~~~
+    LINK redis-check-aof
+
+Hint: To run 'make test' is a good idea ;)
+
+make[1]: Leaving directory `/home/hadoop/redis-2.8.7/src'
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ ./src/redis-server &
+[1] 23882
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ [23882] 20 Mar 11:38:02.884 # Warning: no config file specified, using the default config. In order to specify a config file use ./src/redis-server /path/to/redis.conf
+[23882] 20 Mar 11:38:02.885 # Unable to set the max number of files limit to 10032 (Operation not permitted), setting the max clients configuration to 3984.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 2.8.7 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 23882
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[23882] 20 Mar 11:38:02.886 # Server started, Redis version 2.8.7
+[23882] 20 Mar 11:38:02.886 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[23882] 20 Mar 11:38:02.886 * The server is now ready to accept connections on port 6379
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ mkdir script_src
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ cd script_src/
+[hadoop@ip-10-0-0-38 script_src]$ touch hello.py
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+
+[No write since last change]
+/bin/bash: q: command not found
+
+shell returned 127
+
+Press ENTER or type command to continue
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[2] 31895
+[hadoop@ip-10-0-0-38 script_src]$ Unhandled Error
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/twisted/application/app.py", line 678, in run
+    runApp(config)
+  File "/usr/local/lib64/python3.7/site-packages/twisted/scripts/twistd.py", line 30, in runApp
+    runner.run()
+  File "/usr/local/lib64/python3.7/site-packages/twisted/application/app.py", line 372, in run
+    self.application = self.createOrGetApplication()
+  File "/usr/local/lib64/python3.7/site-packages/twisted/application/app.py", line 439, in createOrGetApplication
+    application = getApplication(self.config, passphrase)
+--- <exception caught here> ---
+  File "/usr/local/lib64/python3.7/site-packages/twisted/application/app.py", line 448, in getApplication
+    application = service.loadApplication(filename, style, passphrase)
+  File "/usr/local/lib64/python3.7/site-packages/twisted/application/service.py", line 404, in loadApplication
+    application = sob.loadValueFromFile(filename, "application")
+  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 175, in loadValueFromFile
+    codeObj = compile(data, filename, "exec")
+builtins.SyntaxError: invalid syntax (hello.py, line 18)
+
+
+Failed to load application: invalid syntax (hello.py, line 18)
+
+^C
+[2]+  Exit 1                  twistd -noy hello.py
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[2] 1465
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:07:09+0000 [-] Log opened.
+2021-03-20 12:07:09+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:07:09+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 42, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+twistd -noy hello.py &kill -9 $(lsof -t -i tcp:8080)
+[3] 1662
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:07:52+0000 [-] Log opened.
+2021-03-20 12:07:52+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:07:52+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 42, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+twistd -noy hello.py &
+[4] 1833
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:08:10+0000 [-] Log opened.
+2021-03-20 12:08:10+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:08:10+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 42, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[5] 2010
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:08:42+0000 [-] Log opened.
+2021-03-20 12:08:42+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:08:42+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 42, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+^C
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[6] 2258
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:09:29+0000 [-] Log opened.
+2021-03-20 12:09:29+0000 [-] Site starting on 8082
+2021-03-20 12:09:29+0000 [-] Starting factory <twisted.web.server.Site object at 0x7f086564a890>
+2021-03-20 12:10:18+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/web/server.py", line 294, in render
+	    body = resrc.render(self)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 204, in render
+	    d = defer.maybeDeferred(_execute)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 197, in _execute
+	    self._app.execute_endpoint, endpoint, request, **kwargs
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 129, in execute_endpoint
+	    return endpoint_f(self._instance, *args, **kwargs)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 241, in _f
+	    return _call(instance, f, request, *a, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 60, in _call
+	    result = __klein_f__(*args, **kwargs)
+	  File "hello.py", line 32, in recs
+	    return 'The recommendations for user ' + id + ' are ' + v
+	builtins.TypeError: can only concatenate str (not "NoneType") to str
+	
+2021-03-20 12:10:18+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:10:17 +0000] "GET /37 HTTP/1.1" 500 5148 "-" "curl/7.61.1"
+2021-03-20 12:12:59+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/web/server.py", line 294, in render
+	    body = resrc.render(self)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 204, in render
+	    d = defer.maybeDeferred(_execute)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 197, in _execute
+	    self._app.execute_endpoint, endpoint, request, **kwargs
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 129, in execute_endpoint
+	    return endpoint_f(self._instance, *args, **kwargs)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 241, in _f
+	    return _call(instance, f, request, *a, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 60, in _call
+	    result = __klein_f__(*args, **kwargs)
+	  File "hello.py", line 32, in recs
+	    return 'The recommendations for user ' + id + ' are ' + v
+	builtins.TypeError: can only concatenate str (not "NoneType") to str
+	
+2021-03-20 12:12:59+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:12:59 +0000] "GET /40 HTTP/1.1" 500 5148 "-" "curl/7.61.1"
+^C
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[7] 4372
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:16:26+0000 [-] Log opened.
+2021-03-20 12:16:26+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:16:26+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 41, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+^C
+[hadoop@ip-10-0-0-38 script_src]$ kill -9 $(lsof -t -i tcp:8082)
+[hadoop@ip-10-0-0-38 script_src]$ 
+[6]-  Killed                  twistd -noy hello.py
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[8] 4620
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:17:20+0000 [-] Log opened.
+2021-03-20 12:17:20+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:17:20+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 41, in <module>
+	    run("localhost", 8080)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8080: [Errno 98] Address already in use.
+	
+^C
+[hadoop@ip-10-0-0-38 script_src]$ vim hello.py 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ twistd -noy hello.py &
+[9] 4947
+[hadoop@ip-10-0-0-38 script_src]$ 2021-03-20 12:18:26+0000 [-] Log opened.
+2021-03-20 12:18:26+0000 [-] Site starting on 8082
+2021-03-20 12:18:26+0000 [-] Starting factory <twisted.web.server.Site object at 0x7fc0580d1790>
+2021-03-20 12:18:35+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:18:35 +0000] "GET /37 HTTP/1.1" 200 42 "-" "curl/7.61.1"
+2021-03-20 12:19:04+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:19:04 +0000] "GET /25 HTTP/1.1" 200 42 "-" "curl/7.61.1"
+
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ 
+[hadoop@ip-10-0-0-38 script_src]$ mv hello.py ../
+00-RELEASENOTES   CONTRIBUTING      deps/             INSTALL           MANIFESTO         redis.conf        runtest-sentinel  sentinel.conf     tests/            
+BUGS              COPYING           .gitignore        Makefile          README            runtest           script_src/       src/              utils/            
+[hadoop@ip-10-0-0-38 script_src]$ mv hello.py ../
+00-RELEASENOTES   CONTRIBUTING      deps/             INSTALL           MANIFESTO         redis.conf        runtest-sentinel  sentinel.conf     tests/            
+BUGS              COPYING           .gitignore        Makefile          README            runtest           script_src/       src/              utils/            
+[hadoop@ip-10-0-0-38 script_src]$ ls
+hello.py
+[hadoop@ip-10-0-0-38 script_src]$ mv hello.py ../
+[hadoop@ip-10-0-0-38 script_src]$ cd ../
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ ls
+00-RELEASENOTES  BUGS  CONTRIBUTING  COPYING  deps  hello.py  INSTALL  Makefile  MANIFESTO  README  redis.conf  runtest  runtest-sentinel  script_src  sentinel.conf  src  tests  utils
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ cat hello.py 
+import os
+import redis
+from klein import run, route
+
+# Start up a Redis instance
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+# Pull out all the recommendations from HDFS
+p = os.popen("hadoop fs -cat recommendations/part*")
+
+# Load the recommendations into Redis
+for i in p:
+
+    # Split recommendations into key of user id
+    # and value of recommendations
+    # E.g., 35^I[2067:5.0,17:5.0,1041:5.0,2068:5.0,2087:5.0,
+    #       1036:5.0,900:5.0,1:5.0,081:5.0,3135:5.0]$
+    try:
+        k, v = i.split('t')
+        r.set(k, v)
+    except:
+        continue
+
+
+
+# Establish an endpoint that takes in user id in the path
+@route('/<string:id>')
+def recs(request, id):
+    # Get recommendations for this user
+    v = r.get(id)
+    return 'The recommendations for user {}  are  {}'.format(id, v)
+
+
+# Make a default endpoint
+@route('/')
+def home(request):
+    return 'Please add a user id to the URL, e.g. http://localhost:8080/1234n'
+
+
+# Start up a listener on port 8080
+run("localhost", 8082)
+
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ vim hello.py 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[10] 7959
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ [23882] 20 Mar 12:24:38.035 * 100 changes in 300 seconds. Saving...
+[23882] 20 Mar 12:24:38.035 * Background saving started by pid 7997
+[7997] 20 Mar 12:24:38.037 * DB saved on disk
+[7997] 20 Mar 12:24:38.038 * RDB: 0 MB of memory used by copy-on-write
+[23882] 20 Mar 12:24:38.135 * Background saving terminated with success
+2021-03-20 12:24:38+0000 [-] Log opened.
+2021-03-20 12:24:38+0000 [-] Site starting on 8081
+2021-03-20 12:24:38+0000 [-] Starting factory <twisted.web.server.Site object at 0x7f9f82fbea90>
+2021-03-20 12:24:59+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:24:59 +0000] "GET /37 HTTP/1.1" 200 132 "-" "curl/7.61.1"
+
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 2021-03-20 12:25:48+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:25:48 +0000] "GET /25 HTTP/1.1" 200 133 "-" "curl/7.61.1"
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ ^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ ^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ cat hello.py 
+
+from klein import run, route
+import redis
+import os
+
+# Start up a Redis instance
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+# Pull out all the recommendations from HDFS
+p = os.popen("hadoop fs -cat recommendations/part*")
+
+# Load the recommendations into Redis
+for i in p:
+
+  # Split recommendations into key of user id 
+  # and value of recommendations
+  # E.g., 35^I[2067:5.0,17:5.0,1041:5.0,2068:5.0,2087:5.0,
+  #       1036:5.0,900:5.0,1:5.0,081:5.0,3135:5.0]$
+  k,v = i.split('\t')
+
+  # Put key, value into Redis
+  r.set(k,v)
+
+# Establish an endpoint that takes in user id in the path
+@route('/<string:id>')
+
+def recs(request, id):
+  # Get recommendations for this user
+  v = r.get(id)
+  return 'The recommendations for user '+id+' are '+v
+
+
+# Make a default endpoint
+@route('/')
+
+def home(request):
+  return 'Please add a user id to the URL, e.g. http://localhost:8080/1234n'
+
+# Start up a listener on port 8081
+run("localhost", 8081)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[11] 8771
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ [23882] 20 Mar 12:26:53.779 * 10000 changes in 60 seconds. Saving...
+[23882] 20 Mar 12:26:53.779 * Background saving started by pid 8819
+[8819] 20 Mar 12:26:53.826 * DB saved on disk
+[8819] 20 Mar 12:26:53.826 * RDB: 0 MB of memory used by copy-on-write
+[23882] 20 Mar 12:26:53.879 * Background saving terminated with success
+2021-03-20 12:26:54+0000 [-] Log opened.
+2021-03-20 12:26:54+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:26:54+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 40, in <module>
+	    run("localhost", 8081)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8081: [Errno 98] Address already in use.
+	
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ vim hello.py 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ kill -9 $(lsof -t -i tcp:8081)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[10]-  Killed                  twistd -noy hello.py
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ cat hello.py 
+
+from klein import run, route
+import redis
+import os
+
+# Start up a Redis instance
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+# Pull out all the recommendations from HDFS
+p = os.popen("hadoop fs -cat recommendations/part*")
+
+# Load the recommendations into Redis
+for i in p:
+
+  # Split recommendations into key of user id 
+  # and value of recommendations
+  # E.g., 35^I[2067:5.0,17:5.0,1041:5.0,2068:5.0,2087:5.0,
+  #       1036:5.0,900:5.0,1:5.0,081:5.0,3135:5.0]$
+  k,v = i.split('\t')
+
+  # Put key, value into Redis
+  r.set(k,v)
+
+# Establish an endpoint that takes in user id in the path
+@route('/<string:id>')
+
+def recs(request, id):
+  # Get recommendations for this user
+  v = r.get(id)
+  return 'The recommendations for user '+id+' are '+v
+
+
+# Make a default endpoint
+@route('/')
+
+def home(request):
+  return 'Please add a user id to the URL, e.g. http://localhost:8081/1234n'
+
+# Start up a listener on port 8081
+run("localhost", 8081)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[12] 10004
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 2021-03-20 12:31:13+0000 [-] Log opened.
+2021-03-20 12:31:13+0000 [-] Site starting on 8081
+2021-03-20 12:31:13+0000 [-] Starting factory <twisted.web.server.Site object at 0x7fb4d532ad10>
+2021-03-20 12:31:20+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/web/server.py", line 294, in render
+	    body = resrc.render(self)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 204, in render
+	    d = defer.maybeDeferred(_execute)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_resource.py", line 197, in _execute
+	    self._app.execute_endpoint, endpoint, request, **kwargs
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 167, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 129, in execute_endpoint
+	    return endpoint_f(self._instance, *args, **kwargs)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 241, in _f
+	    return _call(instance, f, request, *a, **kw)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 60, in _call
+	    result = __klein_f__(*args, **kwargs)
+	  File "hello.py", line 30, in recs
+	    return 'The recommendations for user '+id+' are '+v
+	builtins.TypeError: can only concatenate str (not "bytes") to str
+	
+2021-03-20 12:31:20+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:31:19 +0000] "GET /37 HTTP/1.1" 500 5122 "-" "curl/7.61.1"
+2021-03-20 12:31:34+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:31:34 +0000] "GET /37 HTTP/1.1" 200 132 "-" "curl/7.61.1"
+[23882] 20 Mar 12:31:54.028 * 100 changes in 300 seconds. Saving...
+[23882] 20 Mar 12:31:54.028 * Background saving started by pid 10304
+[10304] 20 Mar 12:31:54.040 * DB saved on disk
+[10304] 20 Mar 12:31:54.041 * RDB: 0 MB of memory used by copy-on-write
+[23882] 20 Mar 12:31:54.128 * Background saving terminated with success
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ ^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ vim hello.py 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[13] 10635
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 2021-03-20 12:33:07+0000 [-] Log opened.
+2021-03-20 12:33:07+0000 [-] Unhandled error in Deferred:
+2021-03-20 12:33:07+0000 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/persisted/sob.py", line 176, in loadValueFromFile
+	    eval(codeObj, d, d)
+	  File "hello.py", line 41, in <module>
+	    run("localhost", 8082)
+	  File "/usr/local/lib/python3.7/site-packages/klein/_app.py", line 440, in run
+	    endpoint.listen(site)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/endpoints.py", line 516, in listen
+	    interface=self._interface,
+	--- <exception caught here> ---
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/defer.py", line 139, in execute
+	    result = callable(*args, **kw)
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/posixbase.py", line 569, in listenTCP
+	    p.startListening()
+	  File "/usr/local/lib64/python3.7/site-packages/twisted/internet/tcp.py", line 1329, in startListening
+	    raise CannotListenError(self.interface, self.port, le)
+	twisted.internet.error.CannotListenError: Couldn't listen on localhost:8082: [Errno 98] Address already in use.
+	
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ kill -9 $(lsof -t -i tcp:8082)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[14] 10906
+[9]   Killed                  twistd -noy hello.py  (wd: ~/redis-2.8.7/script_src)
+(wd now: ~/redis-2.8.7)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 2021-03-20 12:33:46+0000 [-] Log opened.
+2021-03-20 12:33:46+0000 [-] Site starting on 8082
+2021-03-20 12:33:46+0000 [-] Starting factory <twisted.web.server.Site object at 0x7f45b84be9d0>
+2021-03-20 12:33:51+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:33:50 +0000] "GET /37 HTTP/1.1" 200 132 "-" "curl/7.61.1"
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ kill -9 $(lsof -t -i tcp:8082)
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[14]+  Killed                  twistd -noy hello.py
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ twistd -noy hello.py &
+[14] 12270
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 2021-03-20 12:36:37+0000 [-] Log opened.
+2021-03-20 12:36:37+0000 [-] Site starting on 8082
+2021-03-20 12:36:37+0000 [-] Starting factory <twisted.web.server.Site object at 0x7fb22a16da10>
+2021-03-20 12:36:45+0000 [-] "127.0.0.1" - - [20/Mar/2021:12:36:45 +0000] "GET /37 HTTP/1.1" 200 132 "-" "curl/7.61.1"
+^C
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ cat hello.py 
+import os
+import redis
+from klein import run, route
+
+# Start up a Redis instance
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+# Pull out all the recommendations from HDFS
+p = os.popen("hadoop fs -cat recommendations/part*")
+
+# Load the recommendations into Redis
+for i in p:
+
+    # Split recommendations into key of user id
+    # and value of recommendations
+    # E.g., 35^I[2067:5.0,17:5.0,1041:5.0,2068:5.0,2087:5.0,
+    #       1036:5.0,900:5.0,1:5.0,081:5.0,3135:5.0]$
+    try:
+        k, v = i.split('t')
+        r.set(k, v)
+    except:
+        continue
+
+
+
+# Establish an endpoint that takes in user id in the path
+@route('/<string:id>')
+def recs(request, id):
+    # Get recommendations for this user
+    v = r.get(id)
+    return 'The recommendations for user {}  are  {}'.format(id, v)
+
+
+# Make a default endpoint
+@route('/')
+def home(request):
+    return 'Please add a user id to the URL, e.g. http://localhost:8080/1234n'
+
+
+# Start up a listener on port 8080
+run("localhost", 8082)
+
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 
+[hadoop@ip-10-0-0-38 redis-2.8.7]$ 

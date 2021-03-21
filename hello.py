@@ -34,8 +34,8 @@ def recs(request, id):
 # Make a default endpoint
 @route('/')
 def home(request):
-    return 'Please add a user id to the URL, e.g. http://localhost:8081/1234n'
+    return 'Please add a user id to the URL, e.g. http://localhost:8082/1234n'
 
 
-# Start up a listener on port 8080
+# Start up a listener on port 8082
 run("localhost", 8082)
